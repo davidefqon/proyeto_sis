@@ -8,6 +8,8 @@
 \usepackage[left=2.54cm, right=2.54cm, bottom=2.54cm, headheight=20mm]{geometry}
 \usepackage{xcolor} % para definir colores 
 \usepackage{hyperref} % para los enlaces del Indice
+\usepackage{tabularx}
+
 %\usepackage{apacite} % citado en formato apa
 %\usepackage{chngcntr}
 
@@ -25,12 +27,14 @@
 \newcommand{\espacio}{\par\vspace{3mm}}
 \newcommand{\logoleft}{images/Sistemaslogo.png}
 \newcommand{\logoright}{images/Logo_UNAP.png}
-\newcommand{\newsection}[1]{\section{\hspace{6mm} #1}}%1
-\newcommand{\newsubsection}[1]{\subsection{\hspace{5mm} #1}}
-\newcommand{\newsubsubsection}[1]{\subsubsection{\hspace{5mm} #1}}\usepackage{titlesec}
+\newcommand{\newsection}[1]{\section{\hspace{4mm} #1}}%1
+\newcommand{\newsubsection}[1]{\subsection{\hspace{4mm} #1}}
+\newcommand{\newsubsubsection}[1]{\subsubsection{\hspace{4mm} #1}}
+\usepackage{titlesec}
 %nombre de la empresa
 \newcommand{\empresa}{Pantera Digital World S.A.C. }
-
+\newcommand{\basedatos}{SQL Server }
+\newcommand{\lenguaje}{HTML, CSS, JS, scripts SQL y Node.js }
 \newcommand{\titulo}{"Propuesta de implementación de un Sistema de Comercio Electrónico Para la Venta de Equipos y Accesorios de Cómputo" }
 
 \usepackage{tocloft}
@@ -273,37 +277,1327 @@ Los objetivos específicos del proyecto de \titulo.%"Análisis y Diseño de un S
 \end{enumerate}
 Al lograr estos objetivos específicos, se cumplirá el objetivo general del proyecto de implementar un sistema de ventas online eficiente, seguro y de calidad que contribuya al crecimiento y éxito de la empresa \empresa en la venta de equipos de computación. %  para modificar
 %\counterwithin{section}{part}
+\newsubsection{justificacion del tipo de investigación}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| p{7cm}| p{7cm} |} 
+    \hline
+    \textbf{Investigación y Desarrollo Tecnológico} & \textbf{Investigación Tecnológica Formal} \\
+    \hline
+    Se centra en la creación de nuevos productos, servicios o procesos tecnológicos. & Se enfoca en la adquisición de conocimientos y la generación de soluciones en el ámbito tecnológico. \\
+    \hline
+    Orientado a la innovación y la mejora continua en el campo tecnológico. & Se basa en un enfoque científico y sigue un marco teórico y metodológico definido. \\
+    \hline
+    Puede implicar la experimentación, la prueba de conceptos y la implementación de soluciones prácticas. & Se basa en la aplicación de métodos científicos y técnicas de investigación para abordar problemas tecnológicos. \\
+    \hline
+    No siempre sigue una estructura formal y puede ser más flexible en su enfoque. & Sigue una estructura metodológica bien definida que incluye la revisión de literatura, formulación de hipótesis, recolección de datos y análisis. \\
+    \hline
+    Enfoque más aplicado y orientado al mercado, con el objetivo de generar productos o servicios comercializables. & Enfoque más teórico y científico, con el objetivo de generar conocimientos y soluciones que puedan aplicarse en diferentes contextos. \\
+    \hline
+    Resultados pueden estar orientados hacia el desarrollo de patentes, productos comerciales o mejoras en la competitividad de una empresa. & Resultados pueden estar orientados hacia la publicación científica, la validación de teorías o la mejora del conocimiento en el campo tecnológico. \\
+    \hline
+    Ejemplos de áreas de investigación y desarrollo tecnológico incluyen la electrónica, la biotecnología, la ingeniería de software y la nanotecnología. & Ejemplos de áreas de investigación tecnológica formal incluyen la optimización de procesos industriales, la eficiencia energética, la seguridad informática y la robótica. \\
+    \hline
+\end{tabular}
+    \caption{tabla para escoger el método científico}
+    %\label{tabla_seleccion_A}
+\end{table}
+    %\begin{tabular}{ l c l }
+%    descripción  			& unidad de medida & Costo Unitario (S/.) & Cantidad & Costo Total \\
+%    Ip              & = &	55 \\
+%    Cos  $\varphi$    & = &  	  0.78 \\
+%    Voltaje         & = &	 230/400V \\
+%    Potencia	    & = &	2HP \\
+%    Intensidad    	& = & 	6.1/3.5 \\
+%    Frecuencia  	& = & 	60HZ \\
+%    Rpm     		& = &	1680 
+%    \end{tabular}
+    
+
 \newpage
 \newsection{Metodología de investigación }
-el porque escogiste esta metodología
-%\lipsum[1] %  para modificar 
+\subsubsection*{OBJETIVO GENERAL DE LA INVESTIGACIÓN}
+Desarrollar un Sistema de información haciendo uso de la Metodología XP, para la empresa \empresa
+\subsubsection*{OBJETIVOS ESPECÍFICOS DE LA INVESTIGACIÓN}
+\begin{enumerate}
+    \item Analizar las fases de desarrollo utilizados por la metodología XP para la correcta aplicación de sus pasos en el desarrollo del sistema.
+    \item Capturas de los requerimientos de los procesos de ventas, compras y almacén.
+    \item Analizar la situación actual de los procesos de ventas, compras y almacén de la empresa \empresa, específicamente las bases de datos y sistemas manuales de ventas.
+    \item Modelar la base de datos y la arquitectura básica del sistema de información aplicando los recursos disponibles para desarrollar la fase de elaboración.
+    \item Desarrollar un sistema de información que permita gestionar los procesos de ventas, compras y almacén de la empresa \empresa.
+    \item Realizar la evaluación económica del proyecto
+\end{enumerate}
 
-prueba \cite{prueba}.
+\newsubsection{TIPO DE INVESTIGACIÓN}
+Investigación Tecnológica Formal, La investigación tecnológica formal implica la aplicación de métodos científicos y técnicas de investigación para abordar problemas y desafíos relacionados con la tecnología. Estos problemas pueden incluir el desarrollo de nuevos productos, la mejora de procesos industriales, la implementación de sistemas informáticos, la optimización de recursos energéticos, entre otros.
+\espacio
+Algunas características clave de la investigación tecnológica formal son:
+\begin{itemize}
+    \item Marco teórico: Se basa en conocimientos teóricos existentes relacionados con la tecnología y la disciplina específica en la que se lleva a cabo la investigación. Esto implica revisar la literatura existente, estudiar trabajos anteriores y establecer fundamentos teóricos sólidos.
+    \item Metodología: Utiliza métodos científicos y técnicas de investigación para recolectar y analizar datos de manera sistemática. Esto implica el diseño de experimentos, encuestas, entrevistas, estudios de caso, análisis estadístico u otras técnicas adecuadas para responder a las preguntas de investigación planteadas.
+    \item Rigor científico: La investigación tecnológica formal se rige por principios científicos rigurosos, como la objetividad, la replicabilidad y la validez interna y externa. Los resultados deben ser verificables y estar respaldados por evidencia empírica confiable.
+    \item Aplicación práctica: Aunque la investigación tecnológica formal se basa en un enfoque científico, también tiene una orientación práctica. El objetivo es generar conocimientos que puedan ser aplicados para resolver problemas y mejorar la tecnología en contextos reales.
+\end{itemize}
+\newsubsection{HIPÓTESIS}
+La demostración de la hipótesis planteada en el presente proyecto será mediante un Diseño No Experimental.
+\newsubsection{variables}
+\subsubsection*{variable independiente}
+Sistema de Comercio Electrónico
+\subsubsection*{variable Dependiente}
+Venta de equipos \par
+venta de Accesorios de Cómputo.
+
+\newsubsection{Diseño y Contrastación de Hipótesis}
+Mediante el uso del Gestor de bases de datos \basedatos se logrará el correcto manejo de toda la información de los procesos de ventas, compras y almacén de la empresa \empresa.
+\espacio
+El uso del lenguaje de programación \lenguaje nos permitirá desarrollar un sistema potente para gestionar de manera eficiente los procesos de la empresa \empresa.
 
 \newpage
+\newsection{Marco teórico}
+El sistema de Información se desarrollará con una arquitectura de tres capas, haciendo uso de la metodología XP, el lenguaje de programación \lenguaje  y utilizará una base de datos relacional \basedatos. Es por eso que este capítulo se referirá a cada uno de estos temas.
+A continuación, se describe cada una de estas capas:
+\begin{enumerate} 
+    \item Capa de Presentación:\par
+    - HTML, CSS y JavaScript: Esta capa se encarga de la interfaz de usuario y la experiencia del cliente. HTML se utiliza para estructurar y presentar el contenido de las páginas web, CSS se utiliza para aplicar estilos y diseños visualmente atractivos, y JavaScript se utiliza para agregar interactividad y dinamismo a la interfaz.
+    
+    \item Capa de Lógica del Negocio:\par
+    - Node.js: Esta capa se encarga de la lógica del negocio y la gestión de las operaciones relacionadas con la venta de equipos de computación. Node.js permite desarrollar aplicaciones web en el lado del servidor utilizando JavaScript, lo que facilita la construcción de la lógica del negocio y la comunicación con la capa de acceso a datos.
+    
+    \item Capa de Acceso a Datos:\par
+    - SQL Server: Esta capa se encarga de interactuar con la base de datos relacional para almacenar y recuperar los datos relacionados con la venta de equipos de computación. Utilizando consultas SQL, se pueden realizar operaciones como la inserción, actualización y consulta de datos en las tablas de la base de datos.
+\end{enumerate}
+    
+Además de estas capas principales, el proyecto puede incluir otros componentes y tecnologías adicionales, como:
+
+\begin{itemize}
+    \item[-] APIs (Application Programming Interfaces): Puedes utilizar APIs para integrar servicios externos, como pasarelas de pago, proveedores de envío o servicios de autenticación.
+    \item[-] Frameworks y bibliotecas: Puedes aprovechar frameworks y bibliotecas como Express.js para el enrutamiento y manejo de solicitudes HTTP, y otras bibliotecas de JavaScript para tareas específicas, como validación de formularios o manipulación de fechas.
+    \item[-] Seguridad: Debes considerar medidas de seguridad, como la protección contra ataques de inyección SQL, el uso de parámetros preparados o consultas parametrizadas, el almacenamiento seguro de contraseñas y la implementación de autenticación y autorización adecuadas.
+\end{itemize}
+    
+La arquitectura puede evolucionar y adaptarse a medida que avanzas en el desarrollo del proyecto y surgen requisitos adicionales. 
+%Es importante planificar y diseñar la arquitectura cuidadosamente para asegurar la escalabilidad, la mantenibilidad y el rendimiento del sistema.
+
+\newsubsection{Sistemas de Información}
+"\textbf{un conjunto interrelacionado de elementos que recopilan, procesan, almacenan y distribuyen información para apoyar la toma de decisiones y el control en una organización}".
+\cite{kendall}
+\espacio
+Partiendo de esta definición, indica que las organizaciones con éxito utilizan la información como instrumento eficaz para la administración y han adquirido sistemas de información que responden a las necesidades de las personas.
+\espacio Actualmente la necesidad de información en las organizaciones es mucha y su existencia es vital para alcanzar éxito, los sistemas han evolucionado en su uso, comenzando con la automatización de procesos operativos de las organizaciones como apoyo a este nivel para brindar información que sirva de base en el proceso de toma de decisiones.
+\espacio Es importante tener en cuenta que un sistema de información necesita justificar su implementación desde el punto de vista costo/beneficio, partiendo de la concepción del valor que se le otorgue a la información dentro de una organización. Los beneficios se pueden medir en el ámbito intangible y tangible de acuerdo a la organización, que pretende prestar un servicio a la ciudadanía.
+\espacio Los sistemas de información se desarrollan para distintos fines, dependiendo de las necesidades de los usuarios humanos y la empresa.
+
+\subsubsection*{Sistemas de procesamiento de transacciones (SPT):} Estos sistemas se centran en el procesamiento y registro de transacciones diarias de una organización. Su objetivo principal es capturar, almacenar y recuperar datos precisos y actualizados relacionados con transacciones comerciales, como ventas, compras, pagos y registros contables.
+\cite{kendall}
+\subsubsection*{Sistemas de información gerencial (SIG):} Estos sistemas proporcionan información a nivel gerencial para apoyar la toma de decisiones en la organización. Los SIG se enfocan en la generación de informes y análisis que ayudan a los gerentes a supervisar y controlar las operaciones, planificar estratégicamente y tomar decisiones basadas en datos.
+\cite{kendall}
+
+\subsubsection*{Sistemas de soporte a la toma de decisiones (SSTD):} Estos sistemas ayudan a los usuarios a tomar decisiones semiestructuradas o no estructuradas, proporcionando herramientas y recursos para el análisis y la evaluación de alternativas. Los SSTD suelen utilizar técnicas de modelado y simulación para ayudar en la resolución de problemas complejos y la toma de decisiones estratégicas.
+\cite{kendall}
+
+\subsubsection*{Sistemas de información estratégica (SIE):} Estos sistemas se enfocan en proporcionar información a largo plazo y análisis estratégicos para apoyar la planificación y las decisiones a nivel estratégico de la organización. Los SIE se centran en el uso de tecnologías avanzadas de análisis de datos, minería de datos y pronóstico para ayudar a las organizaciones a identificar oportunidades y desafíos en su entorno empresarial.
+\cite{kendall}
+
+\subsubsection*{Sistemas Expertos:} Los sistemas expertos son programas informáticos diseñados para emular la capacidad de un experto humano en un campo específico. Estos sistemas utilizan una base de conocimientos y reglas de inferencia para proporcionar recomendaciones o soluciones a problemas complejos. Utilizan técnicas de razonamiento lógico y experiencia almacenada para simular el pensamiento humano. Los sistemas expertos se aplican en áreas como la medicina, la ingeniería, la gestión empresarial, entre otros.
+\cite{kendall}
+
+\subsubsection*{Inteligencia Artificial (IA):} La inteligencia artificial se refiere a la capacidad de las máquinas para exhibir comportamientos inteligentes y realizar tareas que normalmente requieren la intervención humana. La IA abarca una amplia gama de técnicas y enfoques, como el aprendizaje automático (machine learning), el procesamiento del lenguaje natural (NLP), la visión por computadora y la robótica. Estos sistemas se basan en algoritmos y modelos matemáticos para analizar datos, aprender de ellos y tomar decisiones o realizar tareas complejas de manera autónoma.
+\cite{kendall}
+
+\subsection*{Ciclo de Vida de un Sistema de Información}
+\begin{itemize}
+    \item[-] PLANIFICACIÓN:
+    \begin{itemize}
+        \item Ámbito del proyecto
+        \item Estudio de viabilidad
+        \item Análisis de riesgos
+        \item Estimación
+        \item Planificación temporal
+        \item Asignación de recursos.
+    \end{itemize}
+    \item[-] ANÁLISIS (¿qué?):
+    \begin{itemize}
+        \item Elicitación de requerimientos (funcionales y no funcionales)
+        \item Modelado de datos y de procesos
+    \end{itemize}
+    \item[-] DISEÑO (¿cómo?): Estudio de alternativas y diseño arquitectónico
+    \begin{itemize}
+        \item Diseño de la base de datos
+        \item Diseño de las aplicaciones
+    \end{itemize}
+    \item[-] IMPLEMENTACIÓN: Adquisición de componentes, creación e integración de los recursos necesarios para que el sistema funcione.
+    \item[-] PRUEBAS: Pruebas de unidad, pruebas de integración, pruebas alfa, pruebas beta, test de aceptación.
+    \item[-] INSTALACIÓN / DESPLIEGUE
+    \item[-] USO / MANTENIMIENTO
+\end{itemize}
+
+\subsection*{arquitectura de Sistema de información}
+\begin{itemize}
+    \item La arquitectura del Software es la organización fundamental del sistema que incluye a sus componentes, sus relaciones entre ellos, el ambiente y los principios que dictan su diseño y evolución.
+    \item Involucra un conjunto de decisiones significativas acerca de la organización del sistema
+    \item Selección de sus elementos estructurales y sus interfaces
+    \item Comportamiento, especificado en función de la colaboración de los elementos
+    \item Composición de sub-sistemas más grandes a partir de elementos estructurales y elementos con comportamiento
+\end{itemize}
+La arquitectura de software también involucra
+\begin{itemize}
+    \item Funcionalidad
+    \item Usabilidad
+    \item Tolerancia a cambios
+    \item Performance
+    \item Reutilización
+    \item Restricciones económicas y tecnológicas (equilibrio)
+    \item Aspectos estéticos
+\end{itemize}
+
+\newsubsection{Base teórica}
+La Metodología a utilizar tiene por característica fundamentales el desarrollo iterativo e incremental, aquí los requerimientos y soluciones evolucionan mediante la colaboración e intervención de grupos relacionados con el proyecto en desarrollo.
+\begin{itemize}
+    \item Usabilidad: El sistema debe ser fácil de usar y comprender para los usuarios, tanto para los clientes que realizan compras como para los administradores que gestionan el sistema. Se debe prestar especial atención a la navegación intuitiva, el diseño claro y la disponibilidad de información relevante.
+    \item Eficiencia: El sistema debe ser eficiente en términos de rendimiento y tiempo de respuesta. Los procesos de búsqueda de productos, selección, compra y pago deben realizarse de manera rápida y sin demoras innecesarias.
+    \item Seguridad: La seguridad de los datos y la protección de la información personal y financiera de los usuarios son valores fundamentales. El sistema debe implementar medidas de seguridad robustas, como el cifrado de datos, la autenticación de usuarios, la protección contra ataques cibernéticos y el cumplimiento de regulaciones de protección de datos.
+    \item Confianza: El sistema debe generar confianza en los usuarios, tanto en la autenticidad y calidad de los productos ofrecidos como en la seguridad de las transacciones. Se debe garantizar la disponibilidad de información detallada sobre los productos, reseñas y testimonios de clientes, así como opciones de contacto para consultas y atención al cliente.
+    \item Personalización: Proporcionar una experiencia de compra personalizada puede ser un valor importante. El sistema puede ofrecer recomendaciones de productos basadas en preferencias anteriores, historial de compras y datos de usuarios registrados. También se pueden brindar opciones de personalización, como la creación de listas de deseos o la notificación de disponibilidad de productos deseados.
+    \item Escalabilidad: El sistema debe estar preparado para manejar un alto volumen de usuarios y transacciones. La arquitectura y las tecnologías utilizadas deben ser escalables para adaptarse al crecimiento del negocio y garantizar un rendimiento óptimo en todo momento.
+    \item Adaptabilidad: El sistema debe ser adaptable a las necesidades cambiantes del negocio y a las demandas del mercado. Debe ser capaz de integrar nuevas funcionalidades y actualizaciones de manera ágil y eficiente.
+\end{itemize}
+
+\newsubsection{Resumen de las Metodologías Ágiles más relevantes}
+\subsection*{SCRUM}
+\espacio Scrum es una metodología ágil utilizada en el desarrollo de proyectos que se basa en la colaboración, la adaptabilidad y la entrega incremental. Su objetivo es permitir que los equipos trabajen de manera más eficiente y efectiva, especialmente en entornos donde los requisitos y las circunstancias cambian con frecuencia.
+\espacio En Scrum, los proyectos se dividen en ciclos de trabajo llamados "sprints". Cada sprint tiene una duración fija, generalmente de una a cuatro semanas, durante la cual se lleva a cabo el trabajo planificado. Al comienzo de cada sprint, el equipo de desarrollo selecciona las tareas que se abordarán y las organiza en un "backlog" priorizado.
+\espacio Durante el sprint, el equipo se reúne diariamente en reuniones cortas llamadas "stand-ups" para compartir el progreso, discutir los obstáculos y planificar el trabajo para el próximo día. Al final del sprint, se realiza una revisión para mostrar los resultados obtenidos y recibir comentarios del cliente o del equipo de stakeholders. También se lleva a cabo una retrospectiva para analizar el proceso y buscar formas de mejorar en futuros sprints.
+\espacio Un aspecto fundamental de Scrum es la autogestión del equipo. El equipo es responsable de organizar y planificar su trabajo, y el rol del "Scrum Master" es facilitar el proceso y ayudar a eliminar obstáculos. El "Product Owner" es responsable de definir y priorizar los requisitos, y actúa como el enlace entre el equipo y los stakeholders.
+\espacio La flexibilidad es otro principio clave de Scrum. La metodología permite y fomenta adaptaciones y cambios a lo largo del proyecto, lo que es especialmente útil cuando los requisitos o las condiciones cambian. Esto se logra a través del enfoque incremental de entrega, donde el producto se va desarrollando en iteraciones y se va refinando con el tiempo.
+\espacio Scrum es una metodología ágil que se centra en la colaboración, la adaptabilidad y la entrega incremental. Se basa en ciclos de trabajo llamados sprints, donde el equipo se organiza de manera autónoma y se enfoca en cumplir los objetivos establecidos. Scrum se utiliza en proyectos donde los requisitos son cambiantes y se busca maximizar la eficiencia y la calidad del producto final.
+\subsection*{Xtreme Programming}
+\espacio La metodología XP (Extreme Programming) es un enfoque ágil de desarrollo de software que se centra en la adaptabilidad, la colaboración y la entrega de software de alta calidad de manera rápida y frecuente. XP promueve prácticas de desarrollo iterativas e incrementales, y pone énfasis en la retroalimentación constante entre los miembros del equipo y los clientes.
+\espacio La metodología XP se basa en una serie de valores fundamentales, incluyendo la comunicación cercana y frecuente, la simplicidad en el diseño del software, la retroalimentación rápida y continua, y la valentía para afrontar los cambios y los desafíos.
+\espacio Uno de los pilares de XP es el desarrollo iterativo, donde se realizan pequeñas entregas incrementales de software funcional. Esto permite obtener rápidamente retroalimentación de los usuarios y clientes, y facilita la adaptación a los cambios en los requisitos y prioridades.
+\espacio XP también hace hincapié en la colaboración estrecha entre los miembros del equipo. El desarrollo se lleva a cabo en un entorno de trabajo conjunto, fomentando la comunicación directa y frecuente. Las reuniones diarias, conocidas como "stand-ups", permiten a los miembros del equipo compartir actualizaciones, discutir obstáculos y planificar las tareas del día.
+\espacio Otra característica clave de XP es la programación en parejas, donde dos programadores trabajan juntos en el mismo código. Esto fomenta el aprendizaje mutuo, mejora la calidad del código y reduce los errores.
+\espacio XP también se enfoca en la calidad del software a través de prácticas como las pruebas unitarias automatizadas, la integración continua y la refactorización del código. Estas prácticas garantizan la estabilidad y la funcionalidad del software a medida que se realiza el desarrollo.
+\espacio XP es una metodología ágil de desarrollo de software que se basa en valores como la comunicación, la adaptabilidad y la calidad. Promueve la entrega incremental, la colaboración estrecha entre los miembros del equipo, y prácticas como la programación en parejas, las pruebas automatizadas y la refactorización. XP permite a los equipos desarrollar software de alta calidad de manera rápida y eficiente, adaptándose a los cambios y prioridades del proyecto.
+
+\subsection*{Metodología RUP}
+\espacio La metodología RUP (Rational Unified Process) es un enfoque de desarrollo de software iterativo e incremental que se centra en la planificación, la colaboración y el control del proyecto. RUP es un marco de trabajo flexible que proporciona directrices detalladas para el desarrollo de software, abarcando desde la concepción hasta la entrega final.
+\espacio RUP se basa en cuatro fases principales: Inicio, Elaboración, Construcción y Transición. Cada fase tiene objetivos específicos y actividades asociadas. Durante la fase de Inicio, se establecen los fundamentos del proyecto, se identifican los riesgos y se define el alcance. En la fase de Elaboración, se realiza un análisis más detallado de los requisitos y se crea un plan más completo. La fase de Construcción implica la implementación real del sistema, mientras que la fase de Transición se enfoca en la entrega y la evaluación del software.
+\espacio RUP utiliza un enfoque basado en casos de uso, lo que implica identificar los actores y las interacciones del sistema para comprender los requisitos funcionales. También promueve la arquitectura centrada en modelos, donde se desarrollan modelos visuales para representar la estructura y el comportamiento del sistema.
+\espacio La colaboración es un aspecto fundamental de RUP. Se fomenta la comunicación y la participación activa de los stakeholders, incluyendo a los usuarios finales, los clientes y los desarrolladores. También se enfatiza la gestión de riesgos, identificando y abordando posibles problemas en cada fase del proyecto.
+\espacio RUP también pone énfasis en la calidad del software, promoviendo prácticas como la verificación y validación continuas, las pruebas exhaustivas y la revisión del código. Esto garantiza que el software cumpla con los requisitos establecidos y funcione de manera confiable.
+\espacio RUP es una metodología de desarrollo de software iterativa e incremental que se centra en la planificación, la colaboración y el control del proyecto. Se basa en fases definidas y utiliza un enfoque basado en casos de uso y una arquitectura centrada en modelos. RUP fomenta la colaboración activa de los stakeholders, la gestión de riesgos y la entrega de software de calidad.
+
+\newsubsection{Criterios de selección de la metodología empleada}
+\subsection*{Presupuesto disponible}
+A la hora de llevar a cabo un proyecto es de vital importancia realizar un estimado del presupuesto que se va a destinar a este.
+\espacio Los costos de implementación de cada metodología varían, dados los requerimientos específicos que cada una de ellas posee.
+\espacio Teniendo en cuenta las investigaciones hechas en los anteriores capítulos del proyecto podemos observar los diferentes presupuestos que cada metodología puede tener por los
+diferentes recursos, artefactos y personal que éstas requieren para su desarrollo.
+\espacio RUP puede llegar a ser la metodología más costosa, dependiendo del tamaño del proyecto.
+\espacio Por otro lado, tanto XP como SCRUM por ser metodologías ágiles no demandan muchos gastos en cuestiones de personal y recursos para el desarrollo de los proyectos.
+
+\subsection*{Tamaño del proyecto}
+Las metodologías tradicionales van enfocadas principalmente hacia proyectos grandes que conlleven desarrollos a largo plazo. RUP es una metodología pesada, orientada a los casos de uso y con estándares que facilitan el desarrollo ordenado para proyectos grandes, sin embargo, en proyectos relativamente pequeños puede ocasionar algunos sobrecostos.
+\espacio XP y SCRUM están orientadas principalmente a proyectos no demasiado extensos como el que estamos se va a desarrollar.
+
+\subsection*{tiempos limitados de entrega}
+Todo proyecto, independiente de su tamaño, se ve sujeto a limitaciones de tiempo, las cuales pueden llegar a marcar la diferencia entre la selección de una metodología ágil o una tradicional.
+\espacio Las metodologías ágiles se caracterizan por tener tiempos cortos de diseño e
+implementación por sus cortas iteraciones. En contraposición, las metodologías tradicionales poseen una mejor organización a la hora de la división del trabajo, conllevando iteraciones más prolongadas. XP es una metodología diseñada para realizar entregas viables en tiempos relativamente cortos. RUP requiere una cantidad mayor de tiempo para sus iteraciones, en comparación con una metodología ágil.
+\subsection*{necesidad de documentación}
+Para diversos equipos de trabajo, dependiendo de su tamaño y organización, se hace necesaria la creación de documentos con una mayor o menor profundidad. No todas las empresas requieren documentación exhaustiva sobre su software o los procesos para llevarlo a cabo. La creación de manuales de usuario es opcional dentro de algunas empresas.
+\espacio Tanto XP como SCRUM carecen del manejo de una documentación formal para el desarrollo de los proyectos, la única documentación que estas 2 metodologías ofrecen es el código resultado de las diferentes iteraciones. RUP es una metodología orientada a la creación de múltiples documentos de apoyo para los diversos procesos.
+\subsection*{personal necesario}
+Existen diferentes tamaños de proyecto, cada uno con sus requerimientos de personal, dado el software y hardware necesario, la necesidad de un equipo interdisciplinario y la coordinación requerida entre cada área del desarrollo.
+\espacio XP cuenta con numerosos roles para el control de los procesos en la diferentes iteraciones y el
+número de personas puede aumentar dependiendo del tamaño del grupo de programadores, aun así, el total de miembros no sobrepasa los 15. SCRUM es la metodología que menos personal necesita ya que posee muy pocos roles y su tamaño crece dependiendo del grupo de programación que puede ir de 5 a 10 personas. RUP es una metodología con roles definidos para grupos grandes de programadores.
+\subsection*{adaptabilidad y respuesta a cambios}
+No todo proyecto se ve sujeto a cambios repentinos durante su planeación, pero todos deberían poseer un mecanismo de respuesta ante estos. La posibilidad de que ocurra un cambio repentino varía de acuerdo al tipo de proyecto y sus cualidades.
+\espacio XP y SCRUM como metodologías ágiles responden a uno de los valores en los cuales son basados y esto es la flexibilidad que poseen en respuesta a los cambios que se pueden presentar en el desarrollo del proyecto. Las metodologías tradicionales como RUP son sensibles a cambios, principalmente en etapas avanzadas del proyecto.
+\subsection*{Cliente}
+El cliente es la parte más importante en el desarrollo de cualquier proyecto de software, dado que es él quien provee todos los requerimientos, especificaciones y detalles del proyecto que se va a llevar a cabo, por lo tanto, la disponibilidad de tiempo del cliente para el proyecto es un tema a poner en consideración.
+\espacio
+SCRUM como metodología ágil tiene al cliente como parte del equipo llamándolo Product Owner, el cual participa constantemente de las correcciones y observaciones en las
+diferentes entregas de los Sprints. XP como parte de su estructura de desarrollo posee en sus prácticas como fundamental la participación del cliente no solamente como apoyo a los desarrolladores, sino formando parte del grupo. RUP es un modelo incremental e iterativo, de manera que la interacción con el cliente se realiza principalmente en etapas tempranas de planeación y desarrollo.
+
+\newpage
+\subsection*{Resultado}
+Teniendo en cuenta los criterios analizados en el anteriormente, procedemos a asignar valores a cada metodología según su grado de cumplimiento con los criterios existentes.
+\espacio La evaluación será realizada utilizando números enteros en el rango del 01 al 05, asignando un valor objetivo, dependiendo directamente de la necesidad específica del proyecto a desarrollar.
+\begin{table}[h]
+    \centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+ &                           RUP & SCRUM & XP \\
+\hline
+Presupuesto disponible &           1  & 4 & 5 \\
+\hline
+Tamaño del proyecto &              5  & 3 &  4\\
+\hline
+Tiempos Limitados de entrega &     1  &4  & 5 \\
+\hline
+Necesidad de documentación &        5 & 3 & 4 \\
+\hline
+Personal necesario &               4 &4  & 5 \\
+\hline
+Respuesta a cambios &              3 & 5  & 5 \\
+\hline
+Cleinte &                           3 &  4 & 5       \\
+\hline
+Total &                           22 &  27 & 33      \\
+\hline
+\end{tabular}
+\caption{Criterios de selección de la metodología empleada}
+\end{table}
+
+\newsubsection{Metodología XP}
+Extreme Programming (XP)
+\subsection*{introducción}
+La metodología XP fue creada para desarrollar sistemas de corto plazo por Kent Beck en 1999; el éxito de esta metodología es el uso de una excelente comunicación, su sencillez y el permitir interactuar con el cliente.
+\espacio
+características importantes:
+\begin{itemize}
+    \item Comunicación constante: La comunicación efectiva y continua entre los miembros del equipo de desarrollo y con el cliente es fundamental en XP. Se fomenta la comunicación directa y cara a cara para garantizar la comprensión clara de los requisitos y las necesidades del cliente.
+    \item Simplicidad: XP promueve la simplicidad en el desarrollo de software. Se busca la implementación de soluciones simples y elegantes en lugar de soluciones complejas. Esto facilita el mantenimiento del código y la adaptación a cambios futuros.
+    \item Retroalimentación continua: La retroalimentación es esencial en XP. Se realizan pruebas y revisiones de manera regular para obtener comentarios rápidos sobre el progreso del desarrollo y la calidad del software. La retroalimentación ayuda a mejorar y ajustar el producto en cada iteración.
+    \item Flexibilidad y adaptabilidad: XP es una metodología ágil que se adapta a los cambios en los requisitos y las necesidades del cliente. Se enfoca en el desarrollo iterativo e incremental, lo que permite entregar rápidamente funcionalidades valiosas y ajustarse a los cambios durante el proceso de desarrollo.
+    \item Enfoque en la calidad: XP pone un gran énfasis en la calidad del software. Se utilizan prácticas como las pruebas unitarias, la refactorización y la integración continua para garantizar que el código sea robusto, confiable y fácil de mantener.
+    \item Trabajo en equipo y colaboración: La colaboración y el trabajo en equipo son fundamentales en XP. Se fomenta la programación en parejas, donde dos programadores trabajan juntos en el mismo código, lo que ayuda a mejorar la calidad y el conocimiento compartido.
+    \item Cliente presente y participativo: XP busca la participación activa del cliente en el proceso de desarrollo. El cliente está involucrado en la definición de los requisitos, la priorización de las funcionalidades y la validación del software entregado, lo que garantiza que el producto final satisfaga sus necesidades.
+\end{itemize}
+
+\subsection*{conceptos básicos}
+La metodología XP está fundamentada en los siguientes valores que permiten facilitar el trabajo para realizar la implementación de la aplicación.
+\begin{itemize}
+    \item COMUNICACIÓN\par
+    Mantener un intercambio de información entre el cliente y los programadores durante todo el desarrollo del sistema, para evitar dejar de lado puntos importantes que al inicio fueron presentados.
+    \item  SIMPLICIDAD\par
+    Desarrollar un sistema que sea ágil, unificado y de fácil comprensión para cuando se precise realizar actualizaciones, en caso de ser necesario, no se requiera empezar de cero.
+    \item  RETROALIMENTACIÓN\par
+    Visualizar el desarrollo del sistema a tiempo, para ir verificando si todo esta correcto o si se debe realizar cambios; esto depende de las necesidades del cliente.
+    \item  TENACIDAD\par
+    Es el valor más importante en razón de que a través de éste podemos cumplir los tres valores anteriores, pues se debe poseer: valor para la comunicación, decisión para la simplicidad y enfatizar la retroalimentación.
+\end{itemize}
+
+La metodología XP toma en cuenta cuatro variables muy importantes:
+\begin{itemize}
+    \item COSTE\par
+    Los cambios a realizar no afectan el tiempo de entrega.
+    \item TIEMPO\par
+    Debe ser el menor posible pero siempre y cuando cumpla todos los requerimientos especificados durante el desarrollo del sistema.
+    \item CALIDAD\par
+    Poseer una mayor calidad en el menor tiempo posible.
+    \item ÁMBITO\par
+    Especificado por medio de los programadores.
+\end{itemize}
+
+\subsection*{ventajas de la metodología XP}
+\begin{itemize}
+    \item Entrega rápida de software.
+    \item Adaptabilidad a los cambios.
+    \item Colaboración y comunicación efectiva.
+    \item Mayor calidad del software.
+    \item Mayor satisfacción del cliente.
+    \item Mayor productividad del equipo.
+    \item Mejora continua del proceso de desarrollo.
+\end{itemize}
+Estas ventajas hacen de XP una metodología efectiva para el desarrollo de software, enfocada en la entrega temprana y frecuente de funcionalidades valiosas, la adaptación a los cambios y la colaboración estrecha entre el equipo y el cliente. Además, se enfatiza la calidad del software, la satisfacción del cliente y la mejora continua en cada iteración del proceso de desarrollo.
+
+\subsection*{retroalimentación a escala final}
+
+\begin{itemize}
+    \item Historias de usuario:\par Las historias de usuario son breves descripciones de las funcionalidades que el cliente desea tener en el software. Son escritas en un lenguaje sencillo y comprensible para todos los miembros del equipo, y sirven como base para el desarrollo y la planificación de las iteraciones.
+    \item Iteraciones:\par Las iteraciones son ciclos de trabajo cortos y enfocados en el desarrollo de funcionalidades completas. Cada iteración tiene una duración específica (por ejemplo, 1 a 2 semanas) y al final de cada iteración se entrega una versión funcional del software.
+    \item Planificación del juego:\par La planificación del juego (o "planning game" en inglés) es una actividad colaborativa donde el equipo y el cliente se reúnen para establecer las prioridades y seleccionar las historias de usuario que se trabajarán en la siguiente iteración. Durante esta sesión, se estiman los esfuerzos requeridos y se definen los objetivos para la iteración.
+    \item Programación en parejas:\par La programación en parejas implica que dos programadores trabajen juntos en el mismo código, con uno asumiendo el rol de "conductor" y el otro como "observador". La colaboración en parejas ayuda a mejorar la calidad del código, promueve el aprendizaje mutuo y facilita la revisión del código.
+    \item Pruebas unitarias:\par Las pruebas unitarias son pequeñas pruebas automatizadas que se escriben para verificar el correcto funcionamiento de las unidades de código (como métodos o funciones) de manera aislada. Estas pruebas se ejecutan de forma regular y ayudan a detectar errores rápidamente.
+    \item Integración continua:\par La integración continua implica combinar regularmente los cambios realizados por los miembros del equipo en el repositorio de código principal. Esto asegura que el software esté siempre en un estado funcional y facilita la detección temprana de problemas de integración.
+    \item Refactorización:\par La refactorización consiste en mejorar la estructura interna del código sin cambiar su comportamiento externo. Se busca simplificar y optimizar el código para mejorar su mantenibilidad y legibilidad.
+    \item Cliente presente:\par En XP, se enfatiza la presencia del cliente en el proceso de desarrollo. El cliente trabaja estrechamente con el equipo para proporcionar orientación, clarificar requisitos y validar las funcionalidades entregadas.
+    
+\end{itemize}
+    
+
+\newsubsection{Roles de la metodología XP}
+\begin{enumerate}
+\item \textbf{PROGRAMADOR}\par
+Responsable de construir, analizar, programar, tomar decisiones y realizar pruebas del sistema.
+\item \textbf{JEFE DE PROYECTO}\par
+Responsable de coordinar, gestionar y administrar las reuniones para considerar las condiciones de cómo avanza el proyecto.
+\item \textbf{CLIENTE}\par
+Persona que debe especificar qué construir, cuándo y dónde realizar las pruebas.
+\item \textbf{ENCARGADO DE PRUEBAS}\par
+Delegado de ayudar al cliente para que las pruebas sean realizadas y superadas.
+\item \textbf{RASTREADOR}\par
+Responsable de obtener datos históricos; encargados de observar sin molestar durante el desarrollo del sistema.
+\item \textbf{ENTRENADOR}\par
+Facultado de visualizar el proceso y desarrollo del sistema, desde un segundo plano.
+\end{enumerate}
+
+\newsubsection{Artefacto de la metodología XP}
+\subsection*{historia de usuario}
+\subsection*{iteración}
+\subsection*{tarjeta responsabilidad y colaboración}
+%hablar sobre todo lo referenciado a XP
+\subsection*{SQL server}
+\subsection*{\lenguaje}
+\subsection*{MSSMS }%entorno grafico de SQL server
+\subsection*{Visual Studio}%entorno de produccion para los lenguajes
+\newsubsection{conceptos y definiciones}
+%todos los conceptos y definiciones que es internet compra venta etc.
+
+\newpage
+\subsection*{historia de usuario}
+%
+%  historia de usuario
+%
+\subsubsection*{Descripción caso de uso Iniciar Sesión.}
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{| p{3cm}| p{11cm} |} 
+        \hline  
+        Caso de Uso         &    \textbf{Iniciar Sesión}   \\ 
+        \hline
+        Descripción         &    Este caso de uso permite que cada usuario inicie su sesión y tenga acceso a las funciones predeterminadas de él.   \\ 
+        \hline
+        Actor Principal     &    Cliente Registrado   \\ 
+        \hline
+        Actor Secundario    &       \\ 
+        \hline
+        Precondiciones      &    El usuario ingresa su usuario y contraseña para poder acceder a la aplicación, tienen que estar anteriormente registrados para poder ingresar.   \\ 
+        \hline
+        Flujo Principal     &    El caso de uso comienza cuando el usuario selecciona la opción de iniciar sesión.
+
+            \begin{enumerate}
+                \item{} El sistema despliega un formulario para que el usuario ingrese su identificación de usuario y su contraseña.
+                \item{} El usuario ingresa nombre usuario y la contraseña.
+                \item{} El sistema verifica los datos del usuario.
+                \item{} El sistema permite el acceso del usuario, si el usuario esta creado y el password es correcto lo deja ingresar
+            \end{enumerate}
+        \\  
+        \hline
+        Post condiciones    &    El administrador o el cliente registrado ingresan a su respectivo panel.   \\  
+        \hline
+        Flujos Alternativos &    Datos incorrectos
+        El sistema arroja un mensaje “Su usuario y contraseña no coinciden” y retorna al punto 2 del flujo principal.   \\  
+        \hline
+        \end{tabular}
+    \end{table}
+
+    \newpage
+\subsubsection*{Descripción caso de uso navegar por la tienda.}
+\begin{table}[h]
+        \centering
+        \begin{tabular}{| p{3cm}| p{11cm} |} 
+        \hline  
+        Caso de Uso         &    \textbf{ Navegar por la tienda}   \\ 
+        \hline
+        Descripción         &    Este caso de uso le permite a los usuarios navegar por los diferentes ítems del sistema que no exijan verificación de datos.   \\ 
+        \hline
+        Actor Principal     &   Cliente, Cliente registrado   \\ 
+        \hline
+        Actor Secundario    &       \\ 
+        \hline
+        Precondiciones      &     	\\
+        \hline
+        Flujo Principal     &  El caso de uso comienza cuando el usuario ingresa a la pagina donde puede visualizar los productos disponibles, ver los detalles del producto, registrarse, agregar productos al carrito de compras, vaciar su carrito de compras.      \\  
+        \hline
+        Post condiciones    &       \\  
+        \hline
+        Flujos Alternativos &       \\  
+        \hline
+        \end{tabular}
+    \end{table}
+
+    \newpage
+\subsubsection*{Descripción caso de uso ver detalles del producto}
+\begin{table}[h]
+        \centering
+        \begin{tabular}{| p{3cm}| p{11cm} |} 
+        \hline  
+        Caso de Uso         &    \textbf{Ver detalles del producto }   \\ 
+        \hline
+        Descripción         &    Este caso de uso le permite a los clientes ver los detalles de cada producto en el que estén interesados.   \\ 
+        \hline
+        Actor Principal     &     Cliente, Cliente registrado \\ 
+        \hline
+        Actor Secundario    &       \\ 
+        \hline
+        Precondiciones      &    El cliente debe seleccionar un producto y elegir el botón de detalles para que se muestren los datos del producto. 	\\
+        \hline
+        Flujo Principal     &   El caso de uso comienza cuando el usuario ingresa a la pagina  
+
+            \begin{enumerate}
+                \item  Selecciona el ítem de productos en el menú principal.
+                \item Se despliega una lista de los productos disponibles en la tienda.
+                \item El usuario escoge la pestaña de ver producto.
+                \item Se despliegan los detalles del producto (Datos principales, Descripción del producto, medidas e imágenes).
+            \end{enumerate}
+        \\  
+        \hline
+        Post condiciones    &   Datos del producto deseado para mejorar las ventas.    \\  
+        \hline
+        Flujos Alternativos &       \\  
+        \hline
+        \end{tabular}
+    \end{table}
+
+\newpage
+\subsubsection*{Descripción caso de uso gestionar carrito.}
+\begin{table}[h]
+        \centering
+        \begin{tabular}{| p{3cm}| p{11cm} |} 
+        \hline  
+        Caso de Uso         &    \textbf{ Gestionar Carrito}   \\ 
+        \hline
+        Descripción         &    Este caso de uso le permite a los clientes seleccionar productos y agregarlos al carrito de compras con opción de vaciar todo su carro de compras.   \\ 
+        \hline
+        Actor Principal     &   Cliente, Cliente registrado   \\ 
+        \hline
+        Actor Secundario    &       \\ 
+        \hline
+        Precondiciones      &  El cliente debe seleccionar la cantidad y elegir el botón “Al carrito” ubicado en la parte inferior de la descripción de cada producto.   	\\
+        \hline
+        Flujo Principal     &   El caso de uso comienza cuando el usuario ingresa a la pagina 
+
+            \begin{enumerate}
+                \item Selecciona el ítem de productos en el menú principal.
+                \item Se despliega una lista de los productos disponibles en la tienda.
+                \item El usuario escoge el producto a agregar, selecciona la cantidad y le da clic al botón “Al carrito”.
+                \item La cantidad escogida, pasa a la pestaña de “mis compras”.
+                \item Muestra un listado de los productos escogidos.
+            \end{enumerate}
+        \\  
+        \hline
+        Post condiciones    &    Muestra los productos que selecciono el usuario con la posibilidad de eliminarlos o agregar más productos y realizar la compra.   \\  
+        \hline
+        Flujos Alternativos &       \\  
+        \hline
+        \end{tabular}
+    \end{table}
+    
+% vaciar carrito
+    \newpage
+    \subsubsection*{Descripción caso de uso vaciar carrito.}
+    \begin{table}[h]
+            \centering
+            \begin{tabular}{| p{3cm}| p{11cm} |} 
+            \hline  
+            Caso de Uso         &    \textbf{ Vaciar Carrito}   \\ 
+            \hline
+            Descripción         &    Este caso de uso le permite a los clientes y clientes registrados vaciar el carrito de compras.   \\ 
+            \hline
+            Actor Principal     &    Cliente, Cliente registrado  \\ 
+            \hline
+            Actor Secundario    &       \\ 
+            \hline
+            Precondiciones      &    El carrito de compras debe tener productos agregados para poder poner el carrito de compras en 0. 	\\
+            \hline
+            Flujo Principal     &   El caso de uso comienza cuando el usuario ingresa a la pagina 
+    
+                \begin{enumerate}
+                    \item Selecciona el ítem de productos en el menú principal.
+                    \item Se despliega una lista de los productos disponibles en la tienda.
+                    \item El usuario escoge el producto a agregar, selecciona la cantidad y le da clic al botón “Al carrito”.
+                    \item La cantidad escogida, pasa a la pestaña de “mis compras”.
+                    \item Si el usuario no desea realizar la compra o el producto ya no lo quiere comprar escoge la opción de “vaciar carrito”.
+                    \item Todos los productos agregados son eliminados del carrito.
+                \end{enumerate}
+            \\  
+            \hline
+            Post condiciones    &    Deja sin productos el carrito de compras.   \\  
+            \hline
+            Flujos Alternativos &    Este caso de uso solo funciona si se han agregado productos al carrito de compras   \\  
+            \hline
+            \end{tabular}
+        \end{table}
+
+        \newpage
+\subsubsection*{Descripción caso de uso ver productos disponibles}
+\begin{table}[h]
+        \centering
+        \begin{tabular}{| p{3cm}| p{11cm} |} 
+        \hline  
+        Caso de Uso         &    \textbf{Ver productos disponibles }   \\ 
+        \hline
+        Descripción         &      Este caso de uso le permite a los clientes ver los productos ingresados por el administrador del sistema y que su estado es disponible. \\ 
+        \hline
+        Actor Principal     &  Cliente, Cliente registrado    \\ 
+        \hline
+        Actor Secundario    &       \\ 
+        \hline
+        Precondiciones      &  El cliente debe seleccionar el ítem de productos en el menú principal, se despliega una lista de productos destacados del sistema, si se quiere se busca los productos por categorías   	\\
+        \hline
+        Flujo Principal     &    El caso de uso comienza cuando el usuario ingresa
+
+            \begin{enumerate}
+                \item Selecciona el ítem de productos en el menú principal o
+                \item Selecciona la categoría para visualizar los productos
+                \item Se despliega una lista de los productos disponibles en la tienda para su visualización.
+            \end{enumerate}
+        \\  
+        \hline
+        Post condiciones    &    Muestra los productos destacados o productos ligados a una categoría especifica.   \\  
+        \hline
+        Flujos Alternativos &       \\  
+        \hline
+        \end{tabular}
+    \end{table}
+
+    %realizar compra
+    \newpage
+\subsubsection*{Descripción caso de uso realizar compra.}
+\begin{table}[h]
+        \centering
+        \begin{tabular}{| p{3cm}| p{11cm} |} 
+        \hline  
+        Caso de Uso         &    \textbf{ Realizar Compra}   \\ 
+        \hline
+        Descripción         &   Este caso de uso le permite a los clientes ver los productos ingresados por el administrador del sistema y que su estado es disponible.    \\ 
+        \hline
+        Actor Principal     &    Cliente registrado  \\ 
+        \hline
+        Actor Secundario    &       \\ 
+        \hline
+        Precondiciones      &   El cliente debe estar registrado para poder iniciar sesión y realizar su compra.  	\\
+        \hline
+        Flujo Principal     &    El caso de uso comienza cuando el usuario se dirige al ítem de productos en el menú principal:
+
+            \begin{enumerate}
+                \item Agrega productos al carrito de compras
+                \item Se dirige a visualizar los productos adquiridos y oprime el botón comprar.
+                \item Ingresa sus datos de inicio de sesión
+                \item El sistema valida los datos
+                \item Se realiza la compra
+                \item La nueva compra será visible en el panel del cliente.
+            \end{enumerate}
+        \\  
+        \hline
+        Post condiciones    &    Se realiza el pedido de los productos.   \\  
+        \hline
+        Flujos Alternativos &   4. Error en la validación de los datos, el usuario no existe o escribió mal su contraseña, redirige al punto 3 del flujo principal.    \\  
+        \hline
+        \end{tabular}
+    \end{table}
+%Visualizar pedidos
+    \newpage
+\subsubsection*{Descripción caso de uso Visualizar pedidos}
+\begin{table}[h]
+        \centering
+        \begin{tabular}{| p{3cm}| p{11cm} |} 
+        \hline  
+        Caso de Uso         &    \textbf{ Visualizar pedidos}   \\ 
+        \hline
+        Descripción         &    Este caso de uso permite a los clientes registrados visualizar los pedidos realizados en el sistema y conocer el estado de su pedido que puede ser “Entregado” o “Cancelado”   \\ 
+        \hline
+        Actor Principal     &   Cliente registrado   \\ 
+        \hline
+        Actor Secundario    &       \\ 
+        \hline
+        Precondiciones      &   El cliente debe estar registrado para poder iniciar sesión.  	\\
+        \hline
+        Flujo Principal     &    
+
+            \begin{enumerate}
+                \item El caso de uso comienza cuando el cliente registrado se dirige al botón iniciar sesión en el menú principal.
+                \item Ingresa los datos de inicio de sesión, nombre de usuario y contraseña
+                \item El sistema valida los datos
+                \item Ingresa al panel de clientes
+                \item Selecciona el ítem de Mis pedidos
+                \item Visualiza el pedido, la fecha en que realizo el pedido y el estado actual del pedido.
+            \end{enumerate}
+        \\  
+        \hline
+        Post condiciones    &    El usuario conoce en tiempo real el estado del pedido.   \\  
+        \hline
+        Flujos Alternativos &   3 Error en la contraseña no puede ingresar al panel de clientes redirige al punto 2 del flujo principal.    \\  
+        \hline
+        \end{tabular}
+    \end{table}
+
+%visualizar datos
+    \newpage
+\subsubsection*{Descripción caso de uso visualizar Datos}
+\begin{table}[h]
+        \centering
+        \begin{tabular}{| p{3cm}| p{11cm} |} 
+        \hline  
+        Caso de Uso         &    \textbf{Visualizar Datos }   \\ 
+        \hline
+        Descripción         &   El caso de uso le permite a los clientes registrados observar los datos que tienen ingresados en el sistema como : Nombres, dirección de entrega, teléfonos entre otros, y les arroja dos opciones que son actualizar sus datos y cambiar su contraseña    \\ 
+        \hline
+        Actor Principal     &    Cliente Registrado  \\ 
+        \hline
+        Actor Secundario    &       \\ 
+        \hline
+        Precondiciones      &  El cliente tiene que estar registrado en el sistema, haber iniciado sesión correctamente e ingresar al ítem de mis datos.   	\\
+        \hline
+        Flujo Principal     &    
+
+            \begin{enumerate}
+                \item El caso de uso comienza cuando el cliente registrado se dirige al botón iniciar sesión en el menú principal.
+                \item Ingresa los datos de inicio de sesión, nombre de usuario y contraseña
+                \item El sistema valida los datos
+                \item Ingresa al panel de clientes
+                \item Selecciona el ítem mis datos en el menú del panel de clientes.
+                \item Visualiza los datos y si alguno está mal o quiere actualizarlo procede a seleccionar la opción.
+            \end{enumerate}
+        \\  
+        \hline
+        Post condiciones    &  Visualización de los datos del cliente registrado.     \\  
+        \hline
+        Flujos Alternativos & 3. Error al validar los datos, ingreso el nombre de usuario a la contraseña mal, dirige al punto 2 del flujo principal.      \\  
+        \hline
+        \end{tabular}
+    \end{table}
+
+
+    %CASOS DE USO ADMINISTRADOR
+    \newpage
+    \subsection*{CASOS DE USO ADMINISTRADOR}
+    \subsubsection*{Descripción caso de uso Iniciar Sesión Administrador}
+    \begin{table}[h]
+            \centering
+            \begin{tabular}{| p{3cm}| p{11cm} |} 
+            \hline  
+            Caso de Uso         &    \textbf{Iniciar Sesión }   \\ 
+            \hline
+            Descripción         &   Este caso de uso permite que cada usuario inicie su sesión y tenga acceso a las funciones predeterminadas de él.    \\ 
+            \hline
+            Actor Principal     &   Administrador   \\ 
+            \hline
+            Actor Secundario    &       \\ 
+            \hline
+            Precondiciones      &    El administrador ingresa su usuario y contraseña para poder acceder al panel de administración, tienen que estar anteriormente registrados para poder ingresar. 	\\
+            \hline
+            Flujo Principal     &    El caso de uso comienza cuando el administrador selecciona la opción de iniciar sesión.
+    
+                \begin{enumerate}
+                    \item El sistema despliega un formulario para que el administrador ingrese su usuario y su contraseña.
+                    \item El administrador ingresa nombre usuario y la contraseña.
+                    \item El sistema verifica los datos del administrador
+                    \item El sistema permite el acceso del administrador si el usuario esta creado y el password es correcto lo deja ingresar
+                \end{enumerate}
+            \\  
+            \hline
+            Post condiciones    &     El administrador ingresa a su respectivo panel.  \\  
+            \hline
+            Flujos Alternativos &   4. Datos incorrectos
+            El sistema arroja un mensaje “Su usuario y contraseña no coinciden” y retorna al punto 2 del flujo principal.    \\  
+            \hline
+            \end{tabular}
+        \end{table}
+
+%Descripción caso de uso Visualizar Pedidos
+        \newpage
+\subsubsection*{Descripción caso de uso Visualizar Pedidos}
+\begin{table}[h]
+        \centering
+        \begin{tabular}{| p{3cm}| p{11cm} |} 
+        \hline  
+        Caso de Uso         &    \textbf{Visualizar Pedidos }   \\ 
+        \hline
+        Descripción         &  Este caso de uso le permite al administrador visualizar los pedidos que los clientes registrados han realizado en el sistema, muestra el estado del pedido, la fecha del pedido y los datos del usuario que compro el artículo.     \\ 
+        \hline
+        Actor Principal     &  Administrador    \\ 
+        \hline
+        Actor Secundario    &       \\ 
+        \hline
+        Precondiciones      &  El administrador tiene que estar registrado en el sistema, haber iniciado sesión correctamente e ingresar al ítem de pedidos en el menú principal del sistema.   	\\
+        \hline
+        Flujo Principal     &    
+
+            \begin{enumerate}
+                \item El caso de uso comienza cuando el administrador se dirige al botón iniciar sesión en el menú principal.
+                \item Ingresa los datos de inicio de sesión, nombre de usuario y contraseña
+                \item El sistema valida los datos
+                \item Ingresa al panel de administración
+                \item Selecciona el ítem pedidos en el menú principal del sistema
+                \item Selecciona el ítem de pedidos en las opciones del sistema
+                \item El sistema arroja los pedidos, el estado del pedido los datos del cliente para después ser procesado.
+            \end{enumerate}
+        \\  
+        \hline
+        Post condiciones    &   El administrador visualiza todos los pedidos realizados por los clientes.    \\  
+        \hline
+        Flujos Alternativos &    5. Falta de información, despliega un mensaje “No hay pedidos”.   \\  
+        \hline
+        \end{tabular}
+    \end{table}
+
+
+    \newpage
+\subsubsection*{Descripción caso de uso Generar reporte pedido}
+\begin{table}[h]
+        \centering
+        \begin{tabular}{| p{3cm}| p{11cm} |} 
+        \hline  
+        Caso de Uso         &    \textbf{Generar reporte pedido }   \\ 
+        \hline
+        Descripción         &  Permite generar un reporte en .pdf para después ser enviado al comprador, para verificar la compra.     \\ 
+        \hline
+        Actor Principal     &      \\ 
+        \hline
+        Precondiciones      &    El administrador tiene que estar registrado en el sistema, haber iniciado sesión correctamente e ingresar al ítem de pedidos en el menú principal del sistema. 	\\
+        \hline
+        Flujo Principal     &    
+
+            \begin{enumerate}
+                \item El caso de uso comienza cuando el administrador se dirige al botón iniciar sesión en el menú principal.
+                \item Ingresa los datos de inicio de sesión, nombre de usuario y contraseña
+                \item El sistema valida los datos
+                \item Ingresa al panel de administración
+                \item Selecciona el ítem pedidos en el menú principal del sistema
+                \item Selecciona el ítem de pedidos en las opciones del sistema
+                \item El sistema arroja los pedidos, el estado del pedido los datos del cliente para después ser procesado.
+                \item El usuario escoge la opción de generar reporte
+                \item Se descarga un reporte en pdf con la descripción de la compra la cantidad de ítem pedidos por unidad, sus valores, el valor total de la compra y el cliente que registró la compra.
+            \end{enumerate}
+        \\  
+        \hline
+        Post condiciones    &   Se genera un reporte de la compra.    \\  
+        \hline
+        Flujos Alternativos &       \\  
+        \hline
+        \end{tabular}
+    \end{table}
+
+
+    \newpage
+\subsubsection*{Descripción caso de uso Enviar Reporte}
+\begin{table}[h]
+        \centering
+        \begin{tabular}{| p{3cm}| p{11cm} |} 
+        \hline  
+        Caso de Uso         &    \textbf{Enviar reporte }   \\ 
+        \hline
+        Descripción         &  Enviar el reporte vía email al cliente que realizo la compra     \\ 
+        \hline
+        Actor Principal     &    Administrador  \\ 
+        \hline
+        Precondiciones      &    El administrador tiene que estar registrado en el sistema, haber iniciado sesión correctamente e ingresar al ítem de pedidos en el menú principal del sistema. 	\\
+        \hline
+        \end{tabular}
+    \end{table}
+    
+    \newpage
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{| p{3cm}| p{11cm} |}
+            \hline
+        Flujo Principal     &    
+
+            \begin{enumerate}
+                \item El caso de uso comienza cuando el administrador se dirige al botón iniciar sesión en el menú principal.
+                \item Ingresa los datos de inicio de sesión, nombre de usuario y contraseña
+                \item El sistema valida los datos
+                \item Ingresa al panel de administración
+                \item Selecciona el ítem pedidos en el menú principal del sistema
+                \item Selecciona el ítem de pedidos en las opciones del sistema
+                \item El sistema arroja los pedidos, el estado del pedido los datos del cliente para después ser procesado.
+                \item El usuario escoge la opción de generar reporte
+                \item Se descarga un reporte en pdf con la descripción de la compra la cantidad de ítem pedidos por unidad, sus valores, el valor total de la compra y el cliente que registró la compra.
+                \item Después de tener el reporte el administrador escoge la opción de enviar reporte.
+                \item El sistema despliega un formulario con los campos ya diligenciados para que el administrador seleccione el archivo pdf que descargo y lo envié al comprador.
+            \end{enumerate}
+        \\  
+        
+        \hline
+        Post condiciones    &  Envio por email del reporte de la compra al cliente.     \\  
+        \hline
+        Flujos Alternativos &  Los campos requeridos deben estar diligenciado si no es así no dejar enviar el reporte al cliente.     \\  
+        \hline
+        \end{tabular}
+    \end{table}
+
+% Descripción caso de uso pedido entregado
+    \newpage
+\subsubsection*{Descripción caso de uso pedido entregado}
+\begin{table}[h]
+        \centering
+        \begin{tabular}{| p{3cm}| p{11cm} |} 
+        \hline  
+        Caso de Uso         &    \textbf{ Pedido Entregado}   \\ 
+        \hline
+        Descripción         &    El caso de uso se selecciona cuando el pedido ha sido confirmado, se entregó y se le cobro a su destinatario, el pedido cambia de estado.   \\ 
+        \hline
+        Actor Principal     &  Administrador    \\ 
+        \hline
+        Precondiciones      &  El administrador tiene que estar registrado en el sistema, haber iniciado sesión correctamente e ingresar al ítem de pedidos en el menú principal del sistema.   	\\
+        \hline
+        Flujo Principal     &    
+
+            \begin{enumerate}
+                \item El caso de uso comienza cuando el administrador se dirige al botón iniciar sesión en el menú principal.
+                \item Ingresa los datos de inicio de sesión, nombre de usuario y contraseña
+                \item El sistema valida los datos
+                \item Ingresa al panel de administración
+                \item Selecciona el ítem pedidos en el menú principal del sistema
+                \item Selecciona el ítem de pedidos en las opciones del sistema
+                \item El sistema arroja los pedidos, el estado del pedido los datos del cliente para después ser procesado.
+                \item El usuario escoge la opción de “entregado y cobrado”
+                \item Se cambia el estado del pedido.
+                \item Se elimina del ítem de pedido y pasa al ítem de pedidos entregados en el submenú de PEDIDOS.
+            \end{enumerate}
+        \\  
+        \hline
+        Post condiciones    &    Cambio de estado del pedido ha entregado y cobrado.   \\  
+        \hline
+        Flujos Alternativos &       \\  
+        \hline
+        \end{tabular}
+    \end{table}
+
+%Descripción caso de uso cancelar pedido
+    \newpage
+\subsubsection*{Descripción caso de uso cancelar pedido}
+\begin{table}[h]
+        \centering
+        \begin{tabular}{| p{3cm}| p{11cm} |} 
+        \hline  
+        Caso de Uso         &    \textbf{Cancelar pedido }   \\ 
+        \hline
+        Descripción         &   Si por algún motivo el pedido ha de ser cancelado, el usuario selecciona el pedido y selecciona la opción de cancelar pedido, el pedido cambia de estado ha cancelado.    \\ 
+        \hline
+        Actor Principal     &   Administrador   \\ 
+        \hline
+        Precondiciones      &   El administrador tiene que estar registrado en el sistema, haber iniciado sesión correctamente e ingresar al ítem de pedidos en el menú principal del sistema.  	\\
+        \hline
+        Flujo Principal     &    
+
+            \begin{enumerate}
+                \item El caso de uso comienza cuando el administrador se dirige al botón iniciar sesión en el menú principal.
+                \item Ingresa los datos de inicio de sesión, nombre de usuario y contraseña
+                \item El sistema valida los datos
+                \item Ingresa al panel de administración
+                \item Selecciona el ítem pedidos en el menú principal del sistema
+                \item Selecciona el ítem de pedidos en las opciones del sistema
+                \item El sistema arroja los pedidos, el estado del pedido los datos del cliente para después ser procesado.
+                \item El usuario escoge la opción de cancelar
+                \item Se cambia el estado del pedido a cancelado.
+                \item El pedido cancelado es visible en el ítem de pedidos cancelados del submenú de pedidos.
+            \end{enumerate}
+        \\  
+        \hline
+        Post condiciones    &   Cancela el pedido del cliente.    \\  
+        \hline
+        Flujos Alternativos &       \\  
+        \hline
+        \end{tabular}
+    \end{table}
+
+
+%Descripción caso de uso visualizar pedidos entregados
+    \newpage
+\subsubsection*{Descripción caso de uso visualizar pedidos entregados}
+\begin{table}[h]
+        \centering
+        \begin{tabular}{| p{3cm}| p{11cm} |} 
+        \hline  
+        Caso de Uso         &    \textbf{Visualizar pedidos entregados }   \\ 
+        \hline
+        Descripción         &  Este caso de uso permite al administrador visualizar los pedidos entregados y cobrados a los clientes.     \\ 
+        \hline
+        Actor Principal     &    Administrador  \\ 
+        \hline
+        Precondiciones      &   El administrador tiene que estar registrado en el sistema, haber iniciado sesión correctamente e ingresar al ítem de pedidos en el menú principal del sistema.  	\\
+        \hline
+        Flujo Principal     &    
+
+            \begin{enumerate}
+                \item El caso de uso comienza cuando el administrador se dirige al botón iniciar sesión en el menú principal.
+                \item Ingresa los datos de inicio de sesión, nombre de usuario y contraseña
+                \item El sistema valida los datos
+                \item Ingresa al panel de administración
+                \item Selecciona el ítem pedidos en el menú principal del sistema
+                \item Selecciona el ítem de pedidos entregados y cobrados en las opciones del sistema
+                \item El sistema muestra los pedidos entregados, el estado del pedido los datos del cliente.
+            \end{enumerate}
+        \\  
+        \hline
+        Post condiciones    &       \\  
+        \hline
+        Flujos Alternativos &       \\  
+        \hline
+        \end{tabular}
+    \end{table}
+
+
+%Descripción caso de uso ver detalles del pedido entregado
+    \newpage
+\subsubsection*{Descripción caso de uso ver detalles del pedido entregado}
+\begin{table}[h]
+        \centering
+        \begin{tabular}{| p{3cm}| p{11cm} |} 
+        \hline  
+        Caso de Uso         &    \textbf{Ver detalles del pedido entregado }   \\ 
+        \hline
+        Descripción         &  Este caso de uso le permite observar al administrador visualizar los detalles del pedido que entrego y cobro, muestra los datos del cliente que realizo la compra, el producto que compro el cliente, la cantidad vendida, y el total de la compra.     \\ 
+        \hline
+        Actor Principal     &   Administrador   \\ 
+        \hline
+        Precondiciones      & El administrador tiene que estar registrado en el sistema, haber iniciado sesión correctamente e ingresar al ítem de pedidos en el menú principal del sistema.    	\\
+        \hline
+        Flujo Principal     &    
+
+            \begin{enumerate}
+                \item El caso de uso comienza cuando el administrador se dirige al botón iniciar sesión en el menú principal.
+                \item Ingresa los datos de inicio de sesión, nombre de usuario y contraseña
+                \item El sistema valida los datos
+                \item Ingresa al panel de administración
+                \item Selecciona el ítem pedidos en el menú principal del sistema
+                \item Selecciona el ítem de pedidos entregados y cobrados en las opciones del sistema
+                \item El sistema muestra los pedidos entregados, el estado del pedido los datos del cliente.
+                \item Cuando el administrador da clic en ver detalles del pedido se despliega los datos del cliente, el id del pedido y el valor total de la compra.
+            \end{enumerate}
+        \\  
+        \hline
+        Post condiciones    &   Muestra los detalles del pedido entregado.    \\  
+        \hline
+        Flujos Alternativos &       \\  
+        \hline
+        \end{tabular}
+    \end{table}
+
+%Descripción caso de uso administrar productos
+    \newpage
+\subsubsection*{Descripción caso de uso administrar productos}
+\begin{table}[h]
+        \centering
+        \begin{tabular}{| p{3cm}| p{11cm} |} 
+        \hline  
+        Caso de Uso         &    \textbf{ Administrar productos}   \\ 
+        \hline
+        Descripción         &   Este caso de uso le permite al administrador del sistema tener el control total de todos los ítems del menú productos en el panel de administración.    \\ 
+        \hline
+        Actor Principal     &    Administrador  \\ 
+        \hline
+        Precondiciones      &  El administrador tiene que estar registrado en el sistema, haber iniciado sesión correctamente e ingresar al ítem de productos en el menú principal del sistema.   	\\
+        \hline
+        Flujo Principal     &    
+
+            \begin{enumerate}
+                \item El caso de uso comienza cuando el administrador se ha logeado.
+                \item Selecciona el ítem de productos en el menú principal del sistema
+                \item Selecciona alguna opción del menú de productos.
+            \end{enumerate}
+        \\  
+        \hline
+        Post condiciones    &       \\  
+        \hline
+        Flujos Alternativos &  El administrador podrá ingresar a las opciones
+        \begin{itemize}
+            \item Ingresar nuevo producto
+            \item Actualizar producto
+            \item Productos inactivos
+        \end{itemize}
+        \\  
+        \hline
+        \end{tabular}
+    \end{table}
+
+%Descripción caso de uso registrar nuevo producto
+    \newpage
+\subsubsection*{Descripción caso de uso registrar nuevo producto}
+\begin{table}[h]
+        \centering
+        \begin{tabular}{| p{3cm}| p{11cm} |} 
+        \hline  
+        Caso de Uso         &    \textbf{Registrar nuevo producto }   \\ 
+        \hline
+        Descripción         & Este caso de uso le permite al administrador del sistema registrar un nuevo producto para ser visible      \\ 
+        \hline
+        Actor Principal     & Administrador     \\ 
+        \hline
+        Precondiciones      & El administrador tiene que estar registrado en el sistema, haber iniciado sesión correctamente e ingresar al ítem de productos en el menú principal del sistema.    	\\
+        \hline
+        Flujo Principal     &    
+
+            \begin{enumerate}
+                \item El caso de uso empieza si el administrador ya está logeado en el sistema.
+                \item Selecciona el ítem de productos en el menú principal.
+                \item Selecciona la opción de registrar nuevo producto
+                \item El sistema despliega un formularios para el ingreso del nuevo producto
+                \item El usuario llena los campos y crea el nuevo producto.
+            \end{enumerate}
+        \\  
+        \hline
+        Post condiciones    &       \\  
+        \hline
+        Flujos Alternativos &  5. Debe ingresar todos los campos si no redirige al punto 4 del flujo principal.     \\  
+        \hline
+        \end{tabular}
+    \end{table}
+
+%Descripción caso de uso actualizar producto
+    \newpage
+    \subsubsection*{Descripción caso de uso actualizar producto}
+    \begin{table}[h]
+            \centering
+            \begin{tabular}{| p{3cm}| p{11cm} |} 
+            \hline  
+            Caso de Uso         &    \textbf{Actualizar producto }   \\ 
+            \hline
+            Descripción         &  Este caso de uso le permite al administrador del sistema actualizar los datos de un producto que ya este creado.     \\ 
+            \hline
+            Actor Principal     & Administrador     \\ 
+            \hline
+            Precondiciones      & El administrador tiene que estar registrado en el sistema, haber iniciado sesión correctamente e ingresar al ítem de productos en el menú principal del sistema.    	\\
+            \hline
+            Flujo Principal     &    
+    
+                \begin{enumerate}
+                    \item El caso de uso podrá empezar si el usuario esta logeado en el sistema.
+                    \item Escoge la opción de actualizar producto.
+                    \item El sistema despliega una tabla para que el usuario seleccione el producto que quiere actualizar.
+                    \item Después de escoger el producto se despliega un formulario donde el usuario podrá actualizar los datos que necesite modificar.
+                    \item Envía el producto modificado.
+                    \item El sistema valida datos y modifica los nuevos valores ingresados por el administrador.
+                \end{enumerate}
+            \\  
+            \hline
+            Post condiciones    &       \\  
+            \hline
+            Flujos Alternativos &  4. Si no se escoge un producto no se puede modificar sus valores.     \\  
+            \hline
+            \end{tabular}
+        \end{table}
+
+
+%Descripción caso de uso eliminar disponibilidad del producto
+        \newpage
+\subsubsection*{Descripción caso de uso eliminar disponibilidad del producto}
+\begin{table}[h]
+        \centering
+        \begin{tabular}{| p{3cm}| p{11cm} |} 
+        \hline  
+        Caso de Uso         &    \textbf{Eliminar disponibilidad del producto }   \\ 
+        \hline
+        Descripción         &    Este caso de uso le permite al administrador del sistema eliminar el producto del stock en la tienda.   \\ 
+        \hline
+        Actor Principal     &   Administrador   \\ 
+        \hline
+        Precondiciones      &  El administrador tiene que estar registrado en el sistema, haber iniciado sesión correctamente e ingresar al ítem de productos en el menú principal del sistema.   	\\
+        \hline
+        Flujo Principal     &    
+
+            \begin{enumerate}
+                \item Cuando el administrador este logeado en el sistema, escoge el ítem de actualizar productos.
+                \item Se despliega un formulario y el usuario escoge la opción de “no disponible” en el formulario.
+                \item El sistema elimina el producto del stock.
+            \end{enumerate}
+        \\  
+        \hline
+        Post condiciones    &       \\  
+        \hline
+        Flujos Alternativos &       \\  
+        \hline
+        \end{tabular}
+    \end{table}
+
+%Descripción caso de uso administrar categorías
+    \newpage
+\subsubsection*{Descripción caso de uso administrar categorías}
+\begin{table}[h]
+        \centering
+        \begin{tabular}{| p{3cm}| p{11cm} |} 
+        \hline  
+        Caso de Uso         &    \textbf{Administrar Categorías }   \\ 
+        \hline
+        Descripción         &    El administrador podrá crear y eliminar categorías del sistema.   \\ 
+        \hline
+        Actor Principal     &   Administrador   \\ 
+        \hline
+        Precondiciones      &    El administrador tiene que estar registrado en el sistema, haber iniciado sesión correctamente e ingresar al ítem de categorías en el menú principal del sistema. 	\\
+        \hline
+        Flujo Principal     &    
+
+            \begin{enumerate}
+                \item El caso de uso comienza cuando el administrador se dirige al botón iniciar sesión en el menú principal.
+                \item Ingresa los datos de inicio de sesión, nombre de usuario y contraseña
+                \item El sistema valida los datos
+                \item Ingresa al panel de administración
+                \item Selecciona el ítem de categoría en el menú principal del sistema
+                \item Escoge la opción.
+            \end{enumerate}
+        \\  
+        \hline
+        Post condiciones    &       \\  
+        \hline
+        Flujos Alternativos &  El administrador podrá ingresar a las opciones
+        \begin{itemize}
+            \item Crear nueva categoría
+            \item Eliminar categoría
+        \end{itemize}
+        \\  
+        \hline
+        \end{tabular}
+    \end{table}
+
+
+%Descripción caso de uso registrar nueva categoría
+    \newpage
+\subsubsection*{Descripción caso de uso registrar nueva categoría}
+\begin{table}[h]
+        \centering
+        \begin{tabular}{| p{3cm}| p{11cm} |} 
+        \hline  
+        Caso de Uso         &    \textbf{Registrar nueva categoría }   \\ 
+        \hline
+        Descripción         &    El administrador podrá registrar una nueva categoría.   \\ 
+        \hline
+        Actor Principal     &  Administrador    \\ 
+        \hline
+        Precondiciones      &   El administrador tiene que estar registrado en el sistema, haber iniciado sesión correctamente e ingresar al ítem de categorías en el menú principal del sistema.  	\\
+        \hline
+        Flujo Principal     &    
+
+            \begin{enumerate}
+                \item El administrador se dirige al ítem de categorías.
+                \item Selecciona la opción de nueva categoría.
+                \item Llena los campos del formulario.
+                \item La nueva categoría se crea.
+            \end{enumerate}
+        \\  
+        \hline
+        Post condiciones    &       \\  
+        \hline
+        Flujos Alternativos &       \\  
+        \hline
+        \end{tabular}
+    \end{table}
+
+
+%Descripción caso de uso registrar nueva categoría
+    \newpage
+\subsubsection*{Descripción caso de uso registrar nueva categoría}
+\begin{table}[h]
+        \centering
+        \begin{tabular}{| p{3cm}| p{11cm} |} 
+        \hline  
+        Caso de Uso         &    \textbf{ Eliminar categoría}   \\ 
+        \hline
+        Descripción         &  El administrador podrá eliminar categorías del sistema.     \\ 
+        \hline
+        Actor Principal     &  Administrador    \\ 
+        \hline
+        Precondiciones      &  El administrador tiene que estar registrado en el sistema, haber iniciado sesión correctamente e ingresar al ítem de categorías en el menú principal del sistema.   	\\
+        \hline
+        Flujo Principal     &    
+
+            \begin{enumerate}
+                \item El administrador se dirige al ítem de categorías.
+                \item Selecciona la opción de nueva categoría.
+                \item Llena los campos del formulario.
+                \item La nueva categoría se elimina.
+                \item Los productos asociados a esa categoría tienen que ser actualizados.
+            \end{enumerate}
+        \\  
+        \hline
+        Post condiciones    &       \\  
+        \hline
+        Flujos Alternativos &       \\  
+        \hline
+        \end{tabular}
+    \end{table}
+
+%Descripción caso de uso agregar imágenes al producto
+    \newpage
+\subsubsection*{Descripción caso de uso agregar imágenes al producto}
+\begin{table}[h]
+        \centering
+        \begin{tabular}{| p{3cm}| p{11cm} |} 
+        \hline  
+        Caso de Uso         &    \textbf{Agregar imágenes al producto }   \\ 
+        \hline
+        Descripción         &   Este caso de uso le permite al usuario agregar imágenes a un producto para ser visualizado por el cliente.    \\ 
+        \hline
+        Actor Principal     &     Administrador \\ 
+        \hline
+        Precondiciones      &  El administrador tiene que estar registrado en el sistema, haber iniciado sesión correctamente.   	\\
+        \hline
+        Flujo Principal     &    
+
+            \begin{enumerate}
+                \item El administrador escoge la opción de productos del menú principal.
+                \item Escoge la opción de agregar imagen.
+                \item Se despliega un formulario.
+                \item Escoge el producto al que le quiere agregar la imagen.
+                \item Sube la imagen al campo del formulario.
+                \item El sistema agrega la imagen al producto seleccionado.
+            \end{enumerate}
+        \\  
+        \hline
+        Post condiciones    &   Agrega una nueva imagen a un producto creado.    \\  
+        \hline
+        Flujos Alternativos &    7. Debe escoger un producto para asociarlo con la imagen.   \\  
+        \hline
+        \end{tabular}
+    \end{table}
+
+
+%
+%   casos de uso
+%
+
+
+
+\newpage
+
 %\bibliographystyle{apacite}
 \newsection{Referencias Bibliograficas}
 \bibliographystyle{plain}
 \bibliography{referencias.bib}
 
+
 \newpage
 \newsection{Uso de los resultados y contribuciones del proyecto}
-\lipsum[1] %  para modificar
+
+\begin{itemize}
+    \item Implementación del sistema de ventas online: El resultado principal del proyecto sería la implementación exitosa del sistema de ventas online. Este sistema permitiría a la empresa o negocio ofrecer sus productos de equipos de computación a través de una plataforma en línea, brindando a los clientes la posibilidad de buscar, seleccionar, comprar y pagar por los productos de manera conveniente y segura.
+    \item Mejora de la experiencia del cliente: El proyecto contribuiría a mejorar la experiencia del cliente al proporcionar una plataforma intuitiva y fácil de usar. Los clientes podrían disfrutar de una navegación amigable, opciones de búsqueda eficientes, información detallada sobre los productos, métodos de pago seguros y un proceso de compra fluido. Esto ayudaría a fomentar la satisfacción del cliente y a fidelizar a los usuarios.
+    \item Aumento de la eficiencia y la productividad: El sistema de ventas online permitiría automatizar gran parte de los procesos de venta, lo que resultaría en una mayor eficiencia y productividad para el negocio. Se podrían agilizar tareas como la gestión de inventario, el seguimiento de pedidos, la generación de facturas y la administración de clientes. Esto liberaría tiempo y recursos que podrían utilizarse en otras áreas de la empresa.
+    
+\end{itemize}
+
+
 
 \newpage
 \newsection{impactos esperados}
-\lipsum[1] %  para modificar
-    \newsubsection{Impactos en Ciencia y Tecnología}
-    \lipsum[1] %  para modificar
 
-    \newsubsection{Impactos económicos}
-    \lipsum[1] %  para modificar
+%A continuación, se presentan p
+Posibles impactos en los ámbitos de ciencia y tecnología, económico, social y ambiental derivados del proyecto "Análisis y Diseño de un Sistema de Ventas Online para la Venta de Equipos de Computación":
 
-    \newsubsection{Impactos sociales}
-    \lipsum[1] %  para modificar
+\subsection*{Impactos en Ciencia y Tecnología:}
+   - Avance en el conocimiento: El proyecto podría contribuir al avance en el conocimiento en áreas como el diseño de sistemas de ventas online, la aplicación de metodologías ágiles en el desarrollo de software y la mejora de la experiencia del usuario en entornos de comercio electrónico. Los resultados obtenidos podrían servir como base para futuras investigaciones y proyectos relacionados.
+   - Desarrollo de habilidades tecnológicas: El proyecto brinda la oportunidad de desarrollar y fortalecer habilidades técnicas y tecnológicas en áreas como programación web, desarrollo de bases de datos, seguridad en aplicaciones y diseño de interfaces de usuario. Estas habilidades pueden ser valiosas tanto para los participantes en el proyecto como para otros profesionales del sector tecnológico.
 
-    \newsubsection{Impactos ambientales}
-    \lipsum[1] %  para modificar
+\subsection*{Impactos Económicos:}
+   - Incremento en las ventas: La implementación del sistema de ventas online podría conducir a un aumento en las ventas de equipos de computación. Al estar disponible en línea, el negocio tendría la oportunidad de llegar a un público más amplio y potencialmente aumentar sus ingresos.
+   - Reducción de costos operativos: La automatización de procesos y la eficiencia mejorada del sistema podrían llevar a una reducción de los costos operativos. Esto incluye la gestión de inventario, el seguimiento de pedidos, la generación de facturas y la atención al cliente, entre otros aspectos, lo que permitiría optimizar los recursos y mejorar la rentabilidad del negocio.
+
+\subsection*{Impactos Sociales:}
+   - Acceso y conveniencia para los clientes: El sistema de ventas online brinda a los clientes la posibilidad de acceder a una amplia variedad de equipos de computación desde la comodidad de sus hogares u oficinas. Esto les proporciona mayor conveniencia, ahorro de tiempo y la posibilidad de realizar compras en cualquier momento.
+   - Generación de empleo: La implementación y operación del sistema de ventas online puede requerir personal adicional, tanto en áreas técnicas como en atención al cliente. Esto podría generar oportunidades de empleo y contribuir al desarrollo económico local.
+
+\subsection*{Impactos Ambientales:}
+   - Reducción de la huella de carbono: Al permitir a los clientes realizar compras en línea, se puede reducir la necesidad de desplazamientos físicos a tiendas físicas, lo que a su vez podría disminuir las emisiones de gases de efecto invernadero asociadas al transporte.
+   - Menor consumo de recursos: La venta de equipos de computación en línea podría reducir el consumo de recursos naturales, como papel y embalajes, al minimizar la necesidad de documentación física y optimizar el embalaje de los productos para el envío.
+
+%Es importante tener en cuenta que estos impactos pueden variar según el alcance y la implementación específica del proyecto, así como el contexto en el que se desarrolle. También se recomienda realizar un análisis más detallado para evaluar los impactos específicos y adoptar medidas para maximizar los beneficios positivos y minimizar los posibles impactos negativos.
+%\lipsum[1] %  para modificar
+%    \newsubsection{Impactos en Ciencia y Tecnología}
+%    \lipsum[1] %  para modificar
+%
+%    \newsubsection{Impactos económicos}
+%    \lipsum[1] %  para modificar
+%
+%    \newsubsection{Impactos sociales}
+%    \lipsum[1] %  para modificar
+%
+%    \newsubsection{Impactos ambientales}
+%    \lipsum[1] %  para modificar
 
 \newpage
 \newsection{Recursos necesarios }
