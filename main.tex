@@ -1,0 +1,366 @@
+\documentclass[12pt,a4paper]{article}
+
+% incluyendo paquetes
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[left=2.54cm, right=2.54cm, bottom=2.54cm, headheight=20mm]{geometry}
+\usepackage{xcolor} % para definir colores 
+\usepackage{hyperref} % para los enlaces del Indice
+%\usepackage{apacite} % citado en formato apa
+%\usepackage{chngcntr}
+
+
+ %forma de los enlaces 
+ 
+\usepackage{lipsum}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=azul,
+    urlcolor=azul,
+   }
+
+% declaración de variables
+\newcommand{\espacio}{\par\vspace{3mm}}
+\newcommand{\logoleft}{images/Sistemaslogo.png}
+\newcommand{\logoright}{images/Logo_UNAP.png}
+\newcommand{\newsection}[1]{\section{\hspace{6mm} #1}}%1
+\newcommand{\newsubsection}[1]{\subsection{\hspace{5mm} #1}}
+\newcommand{\newsubsubsection}[1]{\subsubsection{\hspace{5mm} #1}}\usepackage{titlesec}
+%nombre de la empresa
+\newcommand{\empresa}{Pantera Digital World S.A.C. }
+
+\newcommand{\titulo}{"Propuesta de implementación de un Sistema de Comercio Electrónico Para la Venta de Equipos y Accesorios de Cómputo" }
+
+\usepackage{tocloft}
+\setlength{\cftsubsecnumwidth}{2em} % ajusta el ancho de la columna de números romanos de subsección
+\setlength{\cftsubsubsecnumwidth}{3.5em} % ajusta el ancho de la columna de números romanos de sub-subsección
+
+
+% renombro el indice -> Indice 
+%\addto\captionsspanish{\renewcommand{\contentsname}{Índice}}
+%\addto\captionsspanish{\renewcommand{\contentsname}{Ínsdfsddice}}    
+% declaración de colores
+\definecolor{azul}{rgb}{0.17, 0.40, 0.69}
+
+\title{ingeniería}
+\author{david}
+
+\renewcommand{\thesection}{\Roman{section}}%2
+\renewcommand{\thesubsection}{\thesection.\Roman{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\roman{subsubsection}}
+
+%inicio  de documento
+\begin{document}
+
+% incluyendo la caratula
+\include{caratula.tex}
+\newpage
+% índice automático
+\tableofcontents
+\newpage
+
+\pagestyle{fancy}
+\fancyhf{} % limpiar existencia de encabezados y pie de paginas
+% la dimensión de la linea
+\renewcommand{\headrulewidth}{3pt}
+% el color de la linea
+\renewcommand{\headrule}{\hbox to\headwidth{\color{azul}\leaders\hrule height \headrulewidth\hfill}}
+%\renewcommand{\thesection}{\Large\color{azul}\textbf{\Roman{section}.}\hspace{1em}} 
+
+
+
+% header
+\lhead{\includegraphics[width=10mm]{\logoleft}}
+\rhead{\includegraphics[width=10mm]{\logoright}}
+% foot
+\fancyhead[C]{\textbf{Universidad Nacional del Altiplano}}
+\fancyfoot[L]{Las Panteras}
+\fancyfoot[R]{\thepage}
+%\fancyfoot[R]{\today}
+
+
+% inicio del documento 
+
+
+\newsection{Resumen}
+%El siguiente proyecto está enfocada en el desarrollo de un sistema de información para mejor los procesos de ventas, compras y almacén de la empresa \empresa, para lo cual se tuvo que ver cómo se realizan sus procesos y así plantear una solución informática.
+%Para tal fin haremos uso de la metodología XP (Xtreme Programming), el potente lenguaje de programación Java con el paradigma de programación orientada a objetos y haciendo uso del sistema gestor de bases de datos MySQL.
+%El presente informe se planteó el desarrollo de un sistema de información para la empresa \empresa con el objetivo de gestionar los procesos de ventas, compras y almacén, logrando un posicionamiento competitivo en el ámbito regional y satisfacer las necesidades de sus clientes.
+%Para el desarrollo del sistema de información se realizó varios procedimientos como la recopilación de la información, revisión de archivos físicos de la empresa y entrevistas con el personal involucrado en los procesos. Con dicha información recopilada se planteó las soluciones a la problemática.
+%Este proyecto se analizó en función a dos variables (Independiente y Dependiente), y todo el planteamiento de hipótesis, aplicada porque utilizaré programas en el desarrollo del sistema de información.
+%
+Este proyecto abordar la necesidad de modernizar y mejorar el proceso de venta de equipos de computación de la empresa, superando las limitaciones del enfoque tradicional y aprovechando las ventajas de la venta en línea. Al implementar un sistema de ventas online utilizando metodologías ágiles XP, se espera agilizar el proceso de venta, mejorando la experiencia del cliente y ampliando el alcance de la empresa en el mercado.
+\espacio
+Teniendo en cuento los costos, tiempos y la metodología. 
+haciendo uso de de las diferentes herramientas case así como (...)
+ 
+
+\newpage
+\newsection{Problema}
+A nivel mundial se ha reconocido que las Tecnologías de la Información y las Comunicaciones (TIC) tienen repercusiones en prácticamente todos los aspectos de nuestras vidas. El rápido avance de estas tecnologías brinda oportunidades sin precedentes para alcanzar niveles más elevados de desarrollo.
+\espacio La capacidad de las TIC para reducir muchos obstáculos tradicionales, especialmente el tiempo, la distancia, posibilitan el uso potencial de estas tecnologías en beneficio de millones de empresas y personas en el mundo.
+\espacio Las Tecnologías de la Información y las Comunicaciones (TICs), están inundando el mundo moderno con implicaciones en cada una de las ramas de la sociedad actual. Como podemos ver la sociedad de hoy día se adapta perfectamente a las tecnologías de la información y las comunicaciones.
+\espacio Las TIC son un fenómeno que ha invadido todos los sectores de la vida, desde el trabajo hasta el ocio, los procesos de enseñanza y aprendizaje que se realizan en los diferentes niveles de educación, la economía porque permiten generar riqueza a distancia y en red superando las fronteras geográficas y políticas. Han impuesto también un cambio en las relaciones laborales, económicas, culturales y sociales, y un cambio en la forma de pensar de los propios individuos.
+\espacio El uso de las TIC en nuestro país está fundamentado en sencillas operaciones relacionadas principalmente a la facturación, cobranza y muy poco en procesos de gestión de negocio. Aún con esta situación, se podrían identificar ciertas medidas y servicios que podrían impulsar el desarrollo de nuevas soluciones para la gestión del negocio, tales como: el uso de Internet como fuente de información en cada uno de
+
+\espacio los diferentes sectores; la implantación de la banca electrónica a nivel general; el desarrollo de la comunicación con la administración pública, el uso de software para gestión de negocios, entre otros.
+\espacio Las TIC en el departamento de Lambayeque han ido creciendo a con el transcurrir del tiempo por el incremento de competitividad entre empresas de diferentes rubros, para poder administrar, controlar y gestionar de una mejor manera sus recursos para lograr el éxito anhelado. La adopción e implantación de tecnologías en las grandes empresas es importante, ya que muestra principalmente el camino a seguir por las pequeñas y medianas empresas en el comportamiento frente al uso de las tecnologías de información y comunicaciones
+%El desarrollo del proyecto \titulo surge como respuesta a la necesidad de la empresa \empresa de mejorar y modernizar su proceso de venta de equipos de computación.
+%\espacio
+El problema actual radica en que la empresa depende principalmente de un enfoque tradicional de venta, que implica una interacción física con los clientes en una ubicación física específica. Esto limita el alcance y la accesibilidad de la empresa, lo que dificulta llegar a un público más amplio y aprovechar las ventajas del mercado en línea.
+\espacio
+Además, el proceso de venta existente puede resultar lento y propenso a errores, ya que involucra una gestión manual de inventario, seguimiento de pedidos, cálculo de precios y procesamiento de pagos. Esto puede llevar a retrasos en la entrega, confusiones en los pedidos y dificultades para mantener actualizado el inventario.
+\espacio
+Realizar este proyecto de un sistema de ventas online basado en metodologías ágiles XP aborda estos problemas al proporcionar una solución que permitirá a la empresa expandir su alcance, agilizar el proceso de venta y mejorar la experiencia del cliente.
+\espacio
+El sistema de ventas online ofrecerá a los clientes la posibilidad de explorar y adquirir equipos de computación de forma conveniente, en cualquier momento y desde cualquier ubicación. Además, la implementación de metodologías ágiles XP permitirá una entrega rápida y continua de nuevas funcionalidades, lo que garantizará la adaptabilidad y la capacidad de respuesta a medida que cambien las necesidades del mercado.
+\newpage
+\newsection{Palabras Claves}
+\begin{itemize}
+    \item Venta de equipos de computación
+    \item Comercio Electrónico
+    \item Metodología XP
+    \item Tecnologías de la Información y las Comunicaciones
+    %\item Sistema de ventas online
+    %\item Ordenadores
+    %\item Metodologías ágiles XP
+    %\item Análisis y diseño
+    %\item Comercio electrónico
+    %\item Experiencia del cliente
+    %\item Sistema Web
+    %\item Alcance ampliado
+    %\item Agilidad en el proceso de venta
+    %\item Gestión de inventario
+    %\item Procesamiento de pagos
+    %\item Entrega continua
+    %\item Adaptabilidad
+    %\item Mejora del proceso de venta
+    %\item Experiencia de compra en línea
+\end{itemize}
+
+\newpage
+\newsection{Justificacion}
+\newsubsection{justificación técnica}
+se fundamenta en varias razones técnicas que respaldan su implementación. Estas justificaciones técnicas son las siguientes:
+\begin{enumerate}
+\item \textbf{Mejora en la accesibilidad:} El sistema de ventas online permitirá a los clientes acceder a la plataforma de compra de equipos de computación desde cualquier ubicación y en cualquier momento. Esto brinda mayor comodidad y accesibilidad para los clientes, lo que puede resultar en un aumento en las ventas y una mayor satisfacción del cliente.
+\item \textbf{Automatización de procesos:} La implementación de un sistema de ventas online permite la automatización de tareas como la gestión de inventario, el procesamiento de pagos y la generación de facturas. Esto agiliza el proceso de venta, reduce la posibilidad de errores humanos y ahorra tiempo y recursos para la empresa.
+\item \textbf{Escalabilidad:} Un sistema de ventas online bien diseñado y desarrollado permite la escalabilidad del negocio. A medida que la demanda aumenta, el sistema puede adaptarse y manejar un mayor volumen de transacciones sin comprometer su rendimiento. Esto es especialmente importante para una empresa como \empresa que busca crecer y expandirse en el mercado .
+\item \textbf{Seguridad:} Al implementar un sistema de ventas online, se pueden tomar medidas de seguridad para proteger la información confidencial de los clientes, como datos de pago y detalles personales. La implementación de medidas de seguridad adecuadas puede brindar confianza a los clientes y establecer una reputación sólida en términos de protección de datos.
+\item \textbf{Adaptabilidad:} La elección de utilizar metodologías ágiles XP para el desarrollo del proyecto proporciona un enfoque iterativo e incremental que permite una mayor adaptabilidad a medida que se obtiene retroalimentación y se realizan ajustes durante el proceso de desarrollo. Esto asegura que el sistema resultante cumpla con las necesidades cambiantes del mercado y los requisitos del negocio.
+\item \textbf{Innovación tecnológica:} La implementación de un sistema de ventas online utilizando metodologías ágiles XP implica la adopción de tecnologías modernas y actualizadas. Esto permite la integración de características avanzadas, como la personalización de productos, recomendaciones inteligentes y seguimiento de pedidos en tiempo real, lo que agrega valor y diferenciación al sistema.
+\end{enumerate}
+\subsubsection*{IMPORTANTE}
+En un mundo globalizado donde las tecnologías de información y comunicación (TIC), brindan oportunidades para alcanzar niveles más elevados de desarrollo, es por ello que es de vital importancia utilizar tecnologías de información y comunicación adecuadas para el procesamiento y transmisión de los datos que se gestionarán en el sistema de información.
+La empresa \empresa, convertirá su emprendimiento en una empresa competitiva insertada en el mercado actual, a raíz de los cambios en la economía mundial y la globalización, los datos relativos a todo el proceso productivo de una compañía se han vuelto uno de los elementos fundamentales para lograr el éxito comercial, por ello la empresa \empresa no es ajeno a estos cambios, razón fundamental para implementar un sistema informático de ventas, compras y almacén.
+
+
+\newsubsection{justificación económica}
+Una vez implementado el sistema de información, permitirá a la empresa \empresa %agilizar sus procesos de compras, ventas y almacén, permitiendo el ahorro de mano de obra en personal de almacén y ventas.
+
+\begin{enumerate}
+\item \textbf{Aumento de las ventas:} La implementación de un sistema de ventas online amplía el alcance de la empresa \empresa, permitiendo llegar a un público más amplio y superar las limitaciones geográficas. Esto puede conducir a un aumento significativo en las ventas, ya que se pueden alcanzar y atender a más clientes potenciales.
+\item \textbf{Reducción de costos operativos:} Al automatizar procesos clave como la gestión de inventario, el procesamiento de pagos y la generación de facturas, se pueden reducir los costos operativos asociados con el personal y los recursos necesarios para realizar estas tareas manualmente. Esto resulta en una mayor eficiencia y ahorro de costos para la empresa.
+\item \textbf{Mejora en la eficiencia y productividad:} Un sistema de ventas online bien diseñado y desarrollado optimiza los procesos de venta, lo que a su vez mejora la eficiencia y la productividad de la empresa. Esto se traduce en una utilización más eficiente de los recursos y una mayor capacidad para gestionar un mayor volumen de transacciones sin incurrir en costos adicionales.
+\item \textbf{Reducción de errores y devoluciones:} La automatización de procesos y la mejora de la precisión en la gestión de inventario y pedidos pueden reducir los errores y las devoluciones de productos. Esto minimiza los costos asociados con reembolsos, reposiciones y la gestión de problemas relacionados con errores humanos.
+\item \textbf{Ventaja competitiva:} La implementación de un sistema de ventas online proporciona a la empresa una ventaja competitiva en el mercado. Al ofrecer a los clientes una plataforma de compra en línea conveniente y segura, se puede diferenciar de los competidores y atraer a nuevos clientes. Esto puede resultar en un aumento en la participación de mercado y una posición más sólida en la industria.
+\item \textbf{Retorno de inversión (ROI):} Si bien el desarrollo e implementación de un sistema de ventas online implica una inversión inicial, se espera que los beneficios económicos a largo plazo superen estos costos. El aumento de las ventas, la reducción de costos operativos y la mejora general en la eficiencia y productividad de la empresa contribuyen a un retorno de inversión favorable.
+\end{enumerate}
+\newsubsection{justificación social}
+el proyecto \titulo tiene una serie de justificaciones sociales que resaltan su impacto positivo en la sociedad. Estas justificaciones sociales son las siguientes:
+\begin{enumerate}
+\item \textbf{Acceso a productos de calidad:} El sistema de ventas online permite a un mayor número de personas acceder a equipos de computación de calidad. Esto puede ser especialmente beneficioso para aquellos que no tienen acceso fácil a tiendas físicas o que residen en áreas remotas. El proyecto brinda la oportunidad de adquirir productos confiables y actualizados, fomentando así la inclusión digital.
+\item \textbf{Mayor comodidad y conveniencia:} La implementación de un sistema de ventas online proporciona a los clientes una experiencia de compra conveniente y flexible. Los usuarios pueden explorar y comprar equipos de computación desde la comodidad de sus hogares, ahorrando tiempo y esfuerzo. Esto resulta en una mejora en la calidad de vida de los clientes al simplificar el proceso de adquisición de productos.
+\item \textbf{Creación de empleo:} La implementación de un sistema de ventas online puede generar nuevas oportunidades de empleo en áreas como el desarrollo de software, diseño de interfaces, gestión de inventario y servicio al cliente. Esto contribuye a la creación de empleo y al crecimiento económico en la industria de tecnología y comercio electrónico.
+\item \textbf{Fomento de la competitividad empresarial:} La adopción de tecnologías modernas y la implementación de un sistema de ventas online fomenta la competitividad entre las empresas. Esto impulsa a las empresas a mejorar sus productos y servicios, ofreciendo una mejor experiencia al cliente y promoviendo la innovación tecnológica en el sector.
+\item \textbf{Reducción de impacto ambiental:} Al realizar ventas en línea, se reduce la necesidad de desplazamientos físicos de los clientes hacia las tiendas, lo que contribuye a la reducción de la emisión de gases de efecto invernadero y la contaminación ambiental. Esto respalda los esfuerzos de sostenibilidad y protección del medio ambiente.
+\item \textbf{Mejora en la transparencia y seguridad:} Un sistema de ventas online bien implementado proporciona transparencia en los precios, especificaciones de los productos y condiciones de compra. Además, se pueden implementar medidas de seguridad para proteger los datos de los clientes, generando confianza en el uso de la plataforma y fomentando relaciones comerciales más seguras.
+\end{enumerate}
+
+%La justificación se basa en la necesidad de adaptarse a la creciente demanda de ventas de productos tecnológicos a través de canales digitales, especialmente debido a la pandemia mundial de COVID-19 que ha impulsado el aumento del comercio electrónico.
+%La venta en línea de productos tecnológicos es una industria en constante crecimiento y representa una gran oportunidad para aumentar la eficiencia y la rentabilidad del negocio, permitiendo una mayor visibilidad de los productos y llegando a un público más amplio en todo el mundo.
+%Además, el diseño de un sistema web para la venta de ordenadores permitirá una mayor accesibilidad y comodidad para los clientes, ya que podrán comprar productos desde la comodidad de sus hogares y en cualquier momento, lo que puede aumentar significativamente las ventas y la satisfacción del cliente.
+%La propuesta de diseño de un sistema web para la venta de ordenadores también permitirá una mayor capacidad para gestionar el inventario de productos, el seguimiento de ventas, y la realización de análisis de datos en tiempo real, lo que puede mejorar significativamente la toma de decisiones y el rendimiento del negocio.
+%En resumen, la justificación radica en la necesidad de adaptarse a la evolución del mercado tecnológico y las nuevas formas de compras de los clientes, así como mejorar la eficiencia y la rentabilidad del negocio, todo esto a través de la implementación de un sistema web para la venta de ordenadores.
+
+\newpage
+\newsection{Antecedentes }
+\newsubsection{Antecedentes en el Contexto Internacional}
+\textbf{CISNEROS D.(2022),}
+'ANÁLISIS, DISEÑO Y DESARROLLO DE UN SISTEMA DE
+INFORMACIÓN WEB PARA AUTOMATIZAR LOS PROCESOS DE
+COMPRAS, INVENTARIOS Y VENTAS (E-COMMERCE).
+CASO DE ESTUDIO: COMPUNEX.'
+\espacio
+\textbf{Conclusión: } 
+Ha desarrollado con éxito un sistema de información web para automatizar los procesos de compras, ventas e inventarios de la empresa Compunex, incluyendo una tienda en línea. Se utilizó la metodología ágil Scrum, lo que permitió una respuesta rápida a los requerimientos gracias a las reuniones con los usuarios especializados. La arquitectura de microservicios fue útil para el desarrollo del sistema, ya que redujo los fallos que afectan al sistema en su totalidad. Se destaca la importancia de conocer los procesos de la empresa para implementar correctamente una arquitectura de microservicios. 
+Por motivos de seguridad, se bloquearon las conexiones y accesos a los servidores, excepto para ciertos casos. Se menciona que al trabajar con equipos conectados por internet, las solicitudes pueden tardar más debido a las intermitencias del servicio, mientras que en una red local no hay demoras. Se mencionan inconvenientes en el manejo de usuarios con tablas de PostgreSQL, por lo que se implementó un módulo de autentificación y autorización propio. Se destaca la generación de un token firmado como buena práctica de seguridad para el acceso a la información. El sistema gestionado mediante un token permite la concurrencia de múltiples 
+usuarios realizando transacciones independientes.
+\espacio Se sugiere que el sistema de comercio electrónico se amplíe y se enfoque en la experiencia del usuario y prácticas de marketing para aumentar las ventas a través de la plataforma.
+\cite{internacional}
+
+\newsubsection{Antecedentes en el Contexto Nacional}
+\textbf{Cruzado L.(2017),}
+'DESARROLLO DE UN SISTEMA INFORMÁTICO WEB CON LA METODOLOGÍA ÁGIL XP PARA EL CONTROL DE INFORMACIÓN DEL PROCESO DE EVAPORACIÓN Y BATIDO DE LA PANELA EN LA PRODUCTORA APROCAÑA NORANDINO' 
+\espacio
+\textbf{Conclusión: } 
+Se ha desarrollado un sistema informático web utilizando la metodología ágil Extreme Programming (XP) para gestionar la información del proceso de evaporación y batido de panela. Se destaca que el método manual utilizado anteriormente generaba un procesamiento ineficiente de la información y falta de control adecuado en el proceso en la productora Aprocaña Norandino.
+La metodología XP se considera una buena alternativa para el desarrollo de sistemas informáticos, ya que permite definir o actualizar los requisitos a medida que avanza el proyecto, basándose en historias de usuario y pruebas en cada iteración.
+\espacio
+Las tecnologías utilizadas en el desarrollo del sistema web permiten realizar las tareas del proceso de forma ágil y optimizando los tiempos y recursos.
+El sistema web fue evaluado por ingenieros especializados en desarrollo de software, y se obtuvo una calificación final que demuestra que cumple con los requisitos establecidos por el Estándar de calidad ISO 9126.
+\cite{nacional}
+
+\newsubsection{Antecedentes en el Contexto Local}
+\textbf{Cruzado L.(2017),}
+'SISTEMA DE INFORMACIÓN WEB CONTABLE PARA LA ADMINISTRACIÓN Y GENERACIÓN DE LIBROS ELECTRÓNICOS PARA EL ESTUDIO CONTABLE QUINO \& ASOCIADOS PUNO'
+\espacio
+\textbf{Conclusión: } 
+En resumen, el texto describe el proceso de análisis, diseño, desarrollo e implementación de un sistema de información web contable utilizando metodologías ágiles y tecnologías específicas como el framework Laravel de PHP y Vue.js. Se destaca que el sistema cumplió con los requisitos y fue bien aceptado por el personal del estudio contable, obteniendo una valoración promedio del 98\% 
+y validando las hipótesis planteadas. Además, se menciona que el sistema mejoró significativamente el tiempo de generación de libros electrónicos, reduciéndolo de 18 días a un tiempo inmediato, lo que resultó en un alto índice de satisfacción y eficiencia en los procesos 
+para los trabajadores.
+\cite{local}
+
+%\lipsum[1]
+
+\newpage
+\newsection{Hipótesis }
+
+En el contexto del proyecto de \titulo , se puede plantear la siguiente hipótesis:
+\espacio
+\subsubsection*{Hipótesis 1} 
+\textbf{La implementación de un sistema de ventas online utilizando metodologías ágiles XP mejorará la eficiencia y efectividad de las ventas de equipos de computación, aumentando la satisfacción del cliente y generando un incremento en las ventas de la empresa.}
+\espacio
+Esta hipótesis se basa en la premisa de que al adoptar un enfoque ágil en el desarrollo del sistema de ventas online y proporcionar una plataforma intuitiva y segura para los clientes, se logrará una mejora significativa en los procesos de venta. Se espera que esto se traduzca en una mayor eficiencia en la gestión de inventario, procesamiento de pagos y generación de facturas, lo que permitirá a la empresa ofrecer una experiencia de compra en línea más fluida y satisfactoria.
+\espacio
+Además, se espera que la implementación de características como recomendaciones personalizadas, seguimiento de pedidos en tiempo real y atención al cliente eficiente contribuya a la satisfacción del cliente. Esto a su vez puede resultar en una mayor fidelidad del cliente, recomendaciones positivas y un aumento en las ventas de la empresa.
+\espacio
+La hipótesis planteada será sometida a prueba a través del análisis y diseño del sistema de ventas online, su implementación y la posterior evaluación de los resultados obtenidos.
+
+%\lipsum[1]
+
+
+\newpage
+\newsection{Objetivo General}
+Desarrollar un Sistema de información haciendo uso de la Metodología XP, para la empresa \empresa.
+
+%\begin{enumerate}
+%\item Diseñar el sistema de ventas online: El proyecto busca realizar un análisis detallado de los requisitos del sistema, identificar las funcionalidades clave y diseñar una arquitectura sólida y escalable para el sistema de ventas online. Se deben considerar aspectos como la gestión de inventario, procesamiento de pagos, generación de facturas y seguimiento de pedidos.
+%\item Implementar el sistema de ventas online: Una vez que el diseño del sistema esté completo, se procederá a la implementación del sistema de ventas online utilizando metodologías ágiles XP. Esto implica la codificación, pruebas, integración de componentes y configuración de la plataforma para garantizar su correcto funcionamiento.
+%\item Mejorar la experiencia del cliente: El proyecto tiene como objetivo proporcionar una experiencia de compra en línea satisfactoria para los clientes. Esto implica la implementación de características como navegación intuitiva, recomendaciones personalizadas, historial de compras, atención al cliente eficiente y seguridad en las transacciones. Se busca mejorar la usabilidad y la interacción del cliente con el sistema.
+%\item Optimizar los procesos de venta: El sistema de ventas online debe permitir la gestión eficiente de inventario, facilitar el procesamiento de pagos, generar facturas de manera automática y proporcionar un seguimiento en tiempo real de los pedidos. El objetivo es optimizar los procesos de venta para agilizar las operaciones y minimizar los errores.
+%\item Ampliar el alcance de la empresa: El proyecto busca ampliar el alcance de la empresa mediante la implementación de un sistema de ventas online. Esto implica llegar a un público más amplio, superar las limitaciones geográficas y aprovechar el potencial del comercio electrónico para aumentar la visibilidad y la participación en el mercado.
+%\end{enumerate}
+%Desarrollar de una página web de ventas, la empresa podrá expandir su alcance y llegar a una audiencia global, aumentando así sus posibilidades de aumentar las ventas y mejorar su rentabilidad. Además, una página web de ventas bien diseñada puede mejorar la experiencia del usuario y la fidelidad de los clientes, lo que puede mejorar la reputación de la empresa y su posición en el mercado.
+
+%Al lograr el objetivo general, se espera que la empresa cuente con un sistema de ventas online eficiente y moderno, que le permita adaptarse a las demandas del mercado, mejorar la satisfacción del cliente y generar un incremento en las ventas y la rentabilidad.
+
+
+\newpage
+\newsection{Objetivos Específicos}
+Los objetivos específicos del proyecto de \titulo.%"Análisis y Diseño de un Sistema de Ventas Online para la Venta de Equipos de Computación utilizando Metodologías Ágiles XP" son los siguientes:
+\begin{enumerate}
+\item Realizar un análisis exhaustivo de los requisitos del sistema: Se llevará a cabo un análisis detallado de los requisitos funcionales y no funcionales del sistema de ventas online. Esto incluirá la identificación de las funcionalidades clave, la definición de los roles de usuario, la gestión de inventario, los procesos de pago y facturación, entre otros aspectos relevantes.
+\item Diseñar la arquitectura del sistema: Basado en los requisitos identificados, se diseñará una arquitectura eficiente y escalable para el sistema de ventas online. Esto incluirá la definición de la estructura de la base de datos, la selección de tecnologías adecuadas, la integración de componentes y la creación de interfaces de usuario intuitivas.
+\item Implementar el sistema de ventas online: Se procederá a la implementación del sistema de ventas online utilizando metodologías ágiles XP. Esto implicará la codificación de las funcionalidades, la realización de pruebas unitarias y de integración, y la iteración continua para asegurar la calidad y el correcto funcionamiento del sistema.
+\item Integrar pasarelas de pago seguras: Se implementarán pasarelas de pago seguras que cumplan con los estándares de seguridad y protección de datos. Esto garantizará la confidencialidad de la información del cliente y brindará confianza en el proceso de pago en línea.
+\item Mejorar la experiencia del cliente: Se implementarán características que mejoren la experiencia del cliente, como la personalización de recomendaciones de productos, la opción de guardar carritos de compra, la visualización de historial de compras y la atención al cliente en línea. Esto contribuirá a brindar una experiencia de compra satisfactoria y personalizada.
+\item Optimizar los procesos de venta y gestión de inventario: Se desarrollarán funcionalidades para optimizar los procesos de venta, como la gestión eficiente de inventario, la actualización en tiempo real de la disponibilidad de productos y la generación automática de facturas y etiquetas de envío. Esto permitirá agilizar las operaciones y minimizar los errores en la gestión de inventario.
+\item Evaluar y garantizar la seguridad del sistema: Se realizarán pruebas exhaustivas de seguridad para identificar y corregir posibles vulnerabilidades. Se implementarán medidas de seguridad como cifrado de datos, autenticación de usuarios y protección contra ataques cibernéticos, garantizando así la seguridad de la plataforma de ventas online.
+\item Realizar pruebas de aceptación y evaluación del sistema: Se llevarán a cabo pruebas de aceptación para asegurar que el sistema cumpla con los requisitos y expectativas establecidos. Se evaluará el desempeño del sistema en términos de velocidad, escalabilidad y usabilidad, y se realizarán ajustes necesarios.
+\end{enumerate}
+Al lograr estos objetivos específicos, se cumplirá el objetivo general del proyecto de implementar un sistema de ventas online eficiente, seguro y de calidad que contribuya al crecimiento y éxito de la empresa \empresa en la venta de equipos de computación. %  para modificar
+%\counterwithin{section}{part}
+\newpage
+\newsection{Metodología de investigación }
+el porque escogiste esta metodología
+%\lipsum[1] %  para modificar 
+
+prueba \cite{prueba}.
+
+\newpage
+%\bibliographystyle{apacite}
+\newsection{Referencias Bibliograficas}
+\bibliographystyle{plain}
+\bibliography{referencias.bib}
+
+\newpage
+\newsection{Uso de los resultados y contribuciones del proyecto}
+\lipsum[1] %  para modificar
+
+\newpage
+\newsection{impactos esperados}
+\lipsum[1] %  para modificar
+    \newsubsection{Impactos en Ciencia y Tecnología}
+    \lipsum[1] %  para modificar
+
+    \newsubsection{Impactos económicos}
+    \lipsum[1] %  para modificar
+
+    \newsubsection{Impactos sociales}
+    \lipsum[1] %  para modificar
+
+    \newsubsection{Impactos ambientales}
+    \lipsum[1] %  para modificar
+
+\newpage
+\newsection{Recursos necesarios }
+\lipsum[1] %  para modificar
+
+\newpage
+\newsection{Localización del proyecto }
+\lipsum[1] %  para modificar
+
+
+
+\newpage
+\newsection{Cronograma de actividades}
+\lipsum[1]
+%\begin{tabular}{ l c l }
+%actividades  			& trimestre \\
+%Ip              & = &	55 \\
+%Cos  $\varphi$    & = &  	  0.78 \\
+%Voltaje         & = &	 230/400V \\
+%Potencia	    & = &	2HP \\
+%Intensidad    	& = & 	6.1/3.5 \\
+%Frecuencia  	& = & 	60HZ \\
+%Rpm     		& = &	1680 
+%\end{tabular}
+
+\newpage
+\newsection{Presupuesto}
+\lipsum[1]
+%\begin{tabular}{ l c l }
+%    descripción  			& unidad de medida & Costo Unitario (S/.) & Cantidad & Costo Total \\
+%    Ip              & = &	55 \\
+%    Cos  $\varphi$    & = &  	  0.78 \\
+%    Voltaje         & = &	 230/400V \\
+%    Potencia	    & = &	2HP \\
+%    Intensidad    	& = & 	6.1/3.5 \\
+%    Frecuencia  	& = & 	60HZ \\
+%    Rpm     		& = &	1680 
+%    \end{tabular}
+    
+
+\end{document}
+
+
+
+%\begin{figure}[h]
+%    \centering
+%    \includegraphics[width=0.5\textwidth]{images/medicion_con_tacometro.png}
+%    \caption{se realizo la medición con el tacómetro} 
+%\end{figure}
+%
+%\begin{tabular}{ l c l }
+%Tipo  			& = & 	GL-90L-4B5 \\
+%Ip              & = &	55 \\
+%Cos  $\varphi$    & = &  	  0.78 \\
+%Voltaje         & = &	 230/400V \\
+%Potencia	    & = &	2HP \\
+%Intensidad    	& = & 	6.1/3.5 \\
+%Frecuencia  	& = & 	60HZ \\
+%Rpm     		& = &	1680 
+%\end{tabular}
